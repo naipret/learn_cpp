@@ -1,3 +1,22 @@
-**.exe
-test.cpp
-.vscode
+#* MOTHER of ignore:>
+#! ignore all files and unignore some files you need with '!'
+*
+
+#* system files
+!.gitignore
+!README.md
+
+#* dot extension files
+!*.cpp
+!*.c
+!*.h
+!*.json
+
+#* folders
+!.vscode
+!include
+!300exercises_codeschool
+
+#* other
+!300exercises_codeschool/300exercises_codeschool.pdf
+!bettercomments_rule.png
