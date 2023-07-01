@@ -1,16 +1,18 @@
 {
     "tasks": [
         {
-            "type": "cppbuild",
             "label": "[Windows] C/C++: g++.exe build active file",
+            "type": "cppbuild",
             "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
-                "${fileDirname}\\**.cpp",
+                // "${fileDirname}\\**.cpp",
+                "${workspaceFolder}\\include\\**",
+                "${workspaceFolder}\\src\\**",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -31,10 +33,11 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
-                "${fileDirname}/**.cpp",
-                "${fileDirname}/include/**.cpp",
+                // "${fileDirname}/**.cpp",
+                "${workspaceFolder}/include/**",
+                "${workspaceFolder}/src/**",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
