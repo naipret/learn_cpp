@@ -1,9 +1,11 @@
 #include <iostream>
 #include <cmath>
+#include "..\include\custom_functions.h"
 
-double vector_length(double xI, double yI, double xM, double yM) {
-    return sqrt(pow(xM - xI, 2) + pow(yM - yI, 2));
-}
+//! i dont need this function anymore because it was re-created in "include/custom_functions.h"
+// double vector_length(double xI, double yI, double xM, double yM) {
+//     return sqrt(pow(xM - xI, 2) + pow(yM - yI, 2));
+// }
 
 int main() {
     double xC { }, yC { }, R { }, xM { }, yM { };
@@ -14,8 +16,11 @@ int main() {
     std::cout << "Nhập toạ đọ điểm M(xM, yM)? ";
     std::cin >> xM >> yM;
     double IM { vector_length(xC, yC, xM, yM) };
-    if (R == IM) std::cout << "M nằm trên C()";
-    else if (R > IM) std::cout << "M nằm trong C()";
-    else if (R < IM) std::cout << "M nằm ngoài C()";
+    if (R == IM) 
+        std::cout << "M nằm trên C()" << std::endl;
+    else if (R > IM) 
+        std::cout << "M nằm trong C()" << std::endl;
+    else if (R < IM) 
+        std::cout << "M nằm ngoài C()" << std::endl;
     return 0;
 }

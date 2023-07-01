@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>  //to use the pi number
+#include <cmath>  //to use the pi number M_PI
 
 int main() {
     //* diện tích: area
