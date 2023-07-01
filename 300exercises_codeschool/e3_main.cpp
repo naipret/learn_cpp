@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "..\include\custom_functions.h"
+#include "..\include\e3_function.h"
 
 //! i dont need this function anymore because it was re-created in "include/custom_functions.h"
 // double vector_length(double xI, double yI, double xM, double yM) {
