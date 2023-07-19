@@ -37,7 +37,7 @@
                 "${workspaceFolder}/include/**",
                 "${workspaceFolder}/src/**",
                 "-o",
-                "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}/bin/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "${fileDirname}"

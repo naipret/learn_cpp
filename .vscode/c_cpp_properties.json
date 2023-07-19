@@ -3,8 +3,8 @@
         {
             "name": "Windows GCC",
             "includePath": [
-                // "${workspaceFolder}\\**",
-                "${workspaceFolder}\\include\\**"
+                "${workspaceFolder}\\include\\**",
+                "${workspaceFolder}\\src\\**"
             ],
             "defines": [
                 "_DEBUG",
@@ -19,8 +19,8 @@
         {
             "name": "Ubuntu GCC",
             "includePath": [
-                // "${workspaceFolder}/**",
-                "${workspaceFolder}/include/**"
+                "${workspaceFolder}/include/**",
+                "${workspaceFolder}/src/**"
             ],
             "defines": [
                 "_DEBUG",
