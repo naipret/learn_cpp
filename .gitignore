@@ -1,12 +1,13 @@
 #* MOTHER of ignore:>
 #! ignore all files and unignore some files you need with '!'
 *
-test.cpp
 
 #* dot extension files
-!*.cpp
 !*.c
+!*.cpp
 !*.h
+!*.hpp
+!*.pdf
 
 #* inportant folders
 !.vscode
@@ -14,15 +15,16 @@ test.cpp
     !.vscode\launch.json
     !.vscode\tasks.json
 !include
-    # alow all .h files
+    # alow all .h and .hpp files
 !src
-    # alow all .cpp files
+    # alow all .c and .cpp files
 !bin
-    # ignore all, blank folder only
+    # IGNORE all, blank folder only
 
 #* project folders
-!300exercises_codeschool
-    !300exercises_codeschool/300exercises_codeschool.pdf
+!300_exercises_codeschool
+    !300_exercises_codeschool\300_exercises_codeschool.pdf
+    # alow all .c and .cpp files
 
 #* other
 !.gitignore
