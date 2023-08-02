@@ -8,7 +8,9 @@ int sumab(int temp) {
     if (temp < 10) {
         return temp;
     } else {
-        return (temp / 10) + (temp - ((temp / 10) * 10));
+        // return (temp / 10) + (temp - ((temp / 10) * 10));
+        //! bị quên cái % : chia lấy phần dư=)))
+        return (temp / 10) + (temp % 10);
     }
 }
 
