@@ -1,0 +1,36 @@
+#* MOTHER of ignore:>
+#! ignore all files and unignore some files you need with '!'
+*
+
+# #* dot extension files
+# !*.c
+# !*.cpp
+# !*.h
+# !*.hpp
+
+#* inportant folders
+!\.vscode
+    \!.vscode\c_cpp_properties.json
+    \!.vscode\launch.json
+    \!.vscode\tasks.json
+!include
+    # alow all .h and .hpp files
+!src
+    # alow all .c and .cpp files
+!bin
+    # IGNORE all, blank folder only
+
+#* project folders
+!project
+    !**\project\300_exercises_codeschool
+        !**\project\300_exercises_codeschool\300_exercises_codeschool.pdf
+        # alow all .c and .cpp files
+    !project\benchmark_sorting_algorithms
+        # alow all .c and .cpp files
+    !project\learn_cpp_header
+        # alow all .c and .cpp files
+
+#* other
+!.gitignore
+!README.md
+!bettercomments_extension.png
