@@ -7,7 +7,6 @@
 !*.cpp
 !*.h
 !*.hpp
-!*.pdf
 
 #* inportant folders
 !.vscode
@@ -22,11 +21,16 @@
     # IGNORE all, blank folder only
 
 #* project folders
-!300_exercises_codeschool
-    !300_exercises_codeschool\300_exercises_codeschool.pdf
-    # alow all .c and .cpp files
+!project
+    !project\300_exercises_codeschool
+        !project\300_exercises_codeschool\300_exercises_codeschool.pdf
+        # alow all .c and .cpp files
+    !project\benchmark_sorting_algorithms
+        # alow all .c and .cpp files
+    !project\learn_cpp_header
+        # alow all .c and .cpp files
 
 #* other
 !.gitignore
 !README.md
-!bettercomments_rule.png
+!bettercomments_extension.png
