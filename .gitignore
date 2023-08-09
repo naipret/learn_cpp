@@ -1,36 +1,57 @@
-#* MOTHER of ignore:>
-#! ignore all files and unignore some files you need with '!'
+#* MOTHER OF IGNORE '*'\:>
 *
+#! ignore all files and unignore some files with '!'
 
-# #* dot extension files
+# # * DOT EXTENSION FILES
+# !*.json
 # !*.c
 # !*.cpp
 # !*.h
 # !*.hpp
 
-#* inportant folders
-!\.vscode
-    \!.vscode\c_cpp_properties.json
-    \!.vscode\launch.json
-    \!.vscode\tasks.json
-!include
-    # alow all .h and .hpp files
-!src
-    # alow all .c and .cpp files
-!bin
-    # IGNORE all, blank folder only
+#! .VSCODE FOLDER
+!.vscode/
+# alow these 3 files only
+!.vscode/c_cpp_properties.json
+!.vscode/launch.json
+!.vscode/tasks.json
 
-#* project folders
-!project
-    !**\project\300_exercises_codeschool
-        !**\project\300_exercises_codeschool\300_exercises_codeschool.pdf
-        # alow all .c and .cpp files
-    !project\benchmark_sorting_algorithms
-        # alow all .c and .cpp files
-    !project\learn_cpp_header
-        # alow all .c and .cpp files
+#! INCLUDE FOLDER
+!include/
+# alow all .h and .hpp files
+!include/*.h
+!include/*.hpp
 
-#* other
+#! SRC FOLDER
+!src/
+# alow all .c and .cpp files
+!src/*.c
+!src/*.cpp
+
+#! BIN FOLDER
+!bin/
+# IGNORE all, blank folder only
+
+#! PROJECT FOLDERS
+!project/
+
+!project/300_exercises_codeschool/
+# alow all .c and .cpp files | 300_exercises_codeschool.pdf
+!project/300_exercises_codeschool/300_exercises_codeschool.pdf
+!project/300_exercises_codeschool/*.c
+!project/300_exercises_codeschool/*.cpp
+
+!project/benchmark_sorting_algorithms/
+# alow all .c and .cpp files
+!project/benchmark_sorting_algorithms/*.c
+!project/benchmark_sorting_algorithms/*.cpp
+
+!project/learn_cpp_header/
+# alow all .c and .cpp files
+!project/learn_cpp_header/*c
+!project/learn_cpp_header/*cpp
+
+#! OTHER IN ROOT FOLDERS
 !.gitignore
-!README.md
 !bettercomments_extension.png
+!README.md
