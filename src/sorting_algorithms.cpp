@@ -1,4 +1,4 @@
-#include "..\include\sorting_algorithms.h"
+#include "../include/sorting_algorithms.hpp"
 
 #include <iostream>
 

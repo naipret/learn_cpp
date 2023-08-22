@@ -1,4 +1,4 @@
-#include "..\include\vector_maths.h"
+#include "../include/vector_maths.hpp"
 
 #include <cmath>  // to use sqrt(),
 #include <iostream>
