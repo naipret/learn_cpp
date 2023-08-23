@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "..\include\sorting_algorithms.h"
+#include "../../include/sorting_algorithms.hpp"
 
 // void bubbleSort(int input_arr[]) {
 //     for (int i = 0; i < 3; ++i) {
