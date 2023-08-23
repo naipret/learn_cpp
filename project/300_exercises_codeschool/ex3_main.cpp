@@ -1,7 +1,7 @@
 #include <cmath>
 #include <iostream>
 
-#include "..\include\vector_maths.h"
+#include "..\..\include\vector_maths.hpp"
 
 //! i dont need this function anymore because it was re-created in
 //! "include/custom_functions.h"

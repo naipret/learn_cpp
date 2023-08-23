@@ -1,4 +1,4 @@
-#include "..\include\triangle_type.h"
+#include "..\include\triangle_type.hpp"
 
 #include <iostream>
 

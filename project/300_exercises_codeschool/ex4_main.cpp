@@ -1,7 +1,7 @@
 #include <cmath>  //to use sqrt()
 #include <iostream>
 
-#include "..\include\triangle_type.h"
+#include "../../include/triangle_type.hpp"
 
 int main() {
     double a{}, b{}, c{};
