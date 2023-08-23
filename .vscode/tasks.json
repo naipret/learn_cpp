@@ -6,8 +6,8 @@
             "type": "cppbuild",
             "command": "/usr/bin/g++",
             "args": [
-                "-fdiagnostics-color=always",
                 "-Wall",
+                "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 // "${fileDirname}/**.cpp",
@@ -32,8 +32,9 @@
             "type": "cppbuild",
             "command": "/usr/bin/g++",
             "args": [
-                "-fdiagnostics-color=always",
+                "-O2",
                 "-Wall",
+                "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 // "${fileDirname}/**.cpp",
@@ -58,8 +59,8 @@
             "type": "cppbuild",
             "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
             "args": [
-                "-fdiagnostics-color=always",
                 "-Wall",
+                "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 // "${fileDirname}\\**.cpp",
