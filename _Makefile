@@ -23,7 +23,7 @@ single:
 
 #! require FILEDIR EXECUTABLE EXTENSION HEADERNAME
 multiple:
-	${CXX} ${OPTIMIZE_FLAG} ${WARNING_FLAGS} -fdiagnostics-color=always ${DEBUG_FLAG} ${FILEDIR} -I${INCLUDE}/${HEADERNAME}.hpp ${SRC}/${HEADERNAME}.cpp -o ${BIN}/${EXECUTABLE}${EXTENSION}
+	${CXX} ${OPTIMIZE_FLAG} ${WARNING_FLAGS} -fdiagnostics-color=always ${DEBUG_FLAG} ${FILEDIR} ${INCLUDE}/${HEADERNAME}.hpp ${SRC}/${HEADERNAME}.cpp -o ${BIN}/${EXECUTABLE}${EXTENSION}
 
 cleanfile:
 	rm $(BIN)/${EXECUTABLE}${EXTENSION}
