@@ -31,6 +31,7 @@
 #! BIN FOLDER
 !bin/
 # IGNORE all, blank folder only
+!bin/.placeholder
 
 #! PROJECT FOLDERS
 !project/
