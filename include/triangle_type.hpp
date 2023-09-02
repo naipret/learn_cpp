@@ -4,6 +4,6 @@
 #include <iostream>
 
 std::string triangle_type(const double &a, const double &b, const double &c);
-std::string advance_triangle_type(const double &a, const double &b, const double &c);
+std::string advanced_triangle_type(const double &a, const double &b, const double &c);
 
 #endif /* TRIANGLE_TYPE_H */
