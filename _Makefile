@@ -1,10 +1,9 @@
 #* tasks.json is dumb:v
 
 #! -------------------- change this --------------------
-FILEDIR := #path/to/your/cpp/file
-
+FILEDIR    := #path/to/your/cpp/file
 EXECUTABLE := #buildwithmakefile
-EXTENSION := #.exe
+EXTENSION  := #.exe
 
 HEADERNAME := #this_is_a_header_name
 #! -----------------------------------------------------
@@ -18,12 +17,13 @@ BIN     := bin
 SRC     := src
 INCLUDE := include
 
-#! require FILE_DIR
+#! require FILEDIR EXECUTABLE EXTENSION
 single:
 	${CXX} ${OPTIMIZE_FLAG} ${WARNING_FLAGS} -fdiagnostics-color=always ${DEBUG_FLAG} ${FILEDIR} -o ${BIN}/${EXECUTABLE}${EXTENSION}
 
+#! require FILEDIR EXECUTABLE EXTENSION HEADERNAME
 multiple:
-	${CXX} ${OPTIMIZE_FLAG} ${WARNING_FLAGS} -fdiagnostics-color=always ${DEBUG_FLAG} ${FILEDIR} ${INCLUDE}/${HEADERNAME}.hpp ${SRC}/${HEADERNAME}.cpp -o ${BIN}/${EXECUTABLE}${EXTENSION}
+	${CXX} ${OPTIMIZE_FLAG} ${WARNING_FLAGS} -fdiagnostics-color=always ${DEBUG_FLAG} ${FILEDIR} -I${INCLUDE}/${HEADERNAME}.hpp ${SRC}/${HEADERNAME}.cpp -o ${BIN}/${EXECUTABLE}${EXTENSION}
 
 cleanfile:
 	rm $(BIN)/${EXECUTABLE}${EXTENSION}
