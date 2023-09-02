@@ -31,7 +31,7 @@
 #! BIN FOLDER
 !bin/
 # IGNORE all, blank folder only
-!bin/.placeholder
+!bin/.gitkeep
 
 #! PROJECT FOLDERS
 !project/
