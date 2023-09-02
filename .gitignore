@@ -53,6 +53,7 @@
 !project/learn_cpp_header/*cpp
 
 #! OTHER IN ROOT FOLDERS
+!_Makefile
 !.gitignore
 !bettercomments_extension.png
 !README.md
