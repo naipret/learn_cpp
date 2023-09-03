@@ -2,13 +2,6 @@
 *
 #! ignore all files and unignore some files with '!'
 
-# # * DOT EXTENSION FILES
-# !*.json
-# !*.c
-# !*.cpp
-# !*.h
-# !*.hpp
-
 #! .VSCODE FOLDER
 !.vscode/
 # alow these 3 files only
