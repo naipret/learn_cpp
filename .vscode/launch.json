@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "[Ubuntu] C/C++: g++ build and debug active file",
+            "name": "[UBUNTU SINGLE] C/C++: g++ build and debug active file",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
@@ -20,10 +20,31 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "[Ubuntu] C/C++: g++ build active file"
+            "preLaunchTask": "[UBUNTU SINGLE] C/C++: g++ build active file"
         },
         {
-            "name": "[Ubuntu] C/C++: g++ build and debug active file WITH -O3",
+            "name": "[UBUNTU SINGLE -O3] C/C++: g++ build and debug active file WITH -O3",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}_with_-O3",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "[UBUNTU SINGLE -O3] C/C++: g++ build active file WITH -O3"
+        },
+        {
+            "name": "[UBUNTU HEADER] C/C++: g++ build and debug active file + custom header",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
@@ -41,10 +62,31 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "[Ubuntu] C/C++: g++ build active file WITH -O3"
+            "preLaunchTask": "[UBUNTU HEADER] C/C++: g++ build active file + custom header"
         },
         {
-            "name": "[Windows] C/C++: g++.exe build and debug active file",
+            "name": "[UBUNTU HEADER -O3] C/C++: g++ build and debug active file + custom header WITH -O3",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}_with_-O3",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "[UBUNTU HEADER -O3] C/C++: g++ build active file + custom header WITH -O3"
+        },
+        {
+            "name": "[WINDOWS SINGLE] C/C++: g++.exe build and debug active file",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
@@ -62,10 +104,31 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "[Windows] C/C++: g++.exe build active file"
+            "preLaunchTask": "[WINDOWS SINGLE] C/C++: g++.exe build active file"
         },
         {
-            "name": "[Windows] C/C++: g++.exe build and debug active file WITH -O3",
+            "name": "[WINDOWS SINGLE -O3] C/C++: g++.exe build and debug active file WITH -O3",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}_with_-O3.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "[WINDOWS SINGLE -O3] C/C++: g++.exe build active file WITH -O3"
+        },
+        {
+            "name": "[WINDOWS HEADER] C/C++: g++.exe build and debug active file + custom header",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
@@ -83,7 +146,28 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "[Windows] C/C++: g++.exe build active file WITH -O3"
+            "preLaunchTask": "[WINDOWS HEADER] C/C++: g++.exe build active file + custom header"
+        },
+        {
+            "name": "[WINDOWS HEADER -O3] C/C++: g++.exe build and debug active file + custom header WITH -O3",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}_with_-O3.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "[WINDOWS HEADER -O3] C/C++: g++.exe build active file + custom header WITH -O3"
         }
     ]
 }
