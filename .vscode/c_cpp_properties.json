@@ -4,8 +4,7 @@
         {
             "name": "Ubuntu GCC",
             "includePath": [
-                "${workspaceFolder}/include/**",
-                // "${workspaceFolder}/src/**"
+                "${workspaceFolder}/include/**"
             ],
             "defines": [
                 "_DEBUG",
@@ -20,15 +19,14 @@
         {
             "name": "Windows GCC",
             "includePath": [
-                "${workspaceFolder}\\include\\**",
-                // "${workspaceFolder}\\src\\**"
+                "${workspaceFolder}/include/**"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
+            "compilerPath": "C:/msys64/mingw64/bin/gcc.exe",
             "cStandard": "c23",
             "cppStandard": "c++23",
             "intelliSenseMode": "windows-gcc-x64"
