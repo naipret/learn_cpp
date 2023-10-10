@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "[UBUNTU SINGLE] C/C++: g++ build and debug active file",
+            "name": "[UBUNTU] C/C++: g++ build and debug active file",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
@@ -20,10 +20,10 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "[UBUNTU SINGLE] C/C++: g++ build active file"
+            "preLaunchTask": "[UBUNTU] C/C++: g++ build active file"
         },
         {
-            "name": "[WINDOWS SINGLE] C/C++: g++.exe build and debug active file",
+            "name": "[WINDOWS] C/C++: g++.exe build and debug active file",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
@@ -33,7 +33,7 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
+            "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -41,7 +41,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "[WINDOWS SINGLE] C/C++: g++.exe build active file"
+            "preLaunchTask": "[WINDOWS] C/C++: g++.exe build active file"
         }
     ]
 }
