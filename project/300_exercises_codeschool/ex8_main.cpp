@@ -5,7 +5,7 @@ int main() {
     double a{}, b{}, c{};
     std::cout << "Nhap a, b, c: ";
     std::cin >> a >> b >> c;
-    double delta{(b * b) - (4.0 * a * c)};
+    double const delta{(b * b) - (4.0 * a * c)};
     if (delta == 0) {
         std::cout << "x = " << (-b) / (2 * a) << std::endl;
     } else if (delta > 0) {

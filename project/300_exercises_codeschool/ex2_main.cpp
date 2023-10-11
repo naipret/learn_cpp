@@ -1,4 +1,4 @@
-#include <cmath>
+#include <cmath> // để sài hàm tính mũ "pow()"
 #include <iostream>
 
 int main() {
@@ -7,7 +7,10 @@ int main() {
     std::cin >> xA >> yA;
     std::cout << "A(xB, yB)? ";
     std::cin >> xB >> yB;
-    double length_AB{sqrt(pow(xB - xA, 2) + pow(yB - yA, 2))};
+    // Hàm pow(a, n) thuộc thư viện <cmath> (cmath là của c++, còn math.h là của c)
+    // Trong đó a là cơ số, n là số mũ
+    // Còn nhiều hàm trong <cmath> cũng hay lắm á
+    double const length_AB{sqrt(pow(xB - xA, 2) + pow(yB - yA, 2))}; // toán 10 sgk mới
     std::cout << "|AB| = " << length_AB << std::endl;
     return 0;
 }

@@ -1,13 +1,9 @@
 #include <cmath>
 #include <iostream>
 
-#include "../../include/vector_maths.hpp"
-
-//! i dont need this function anymore because it was re-created in
-//! "include/custom_functions.h"
-// double vector_length(double xI, double yI, double xM, double yM) {
-//     return sqrt(pow(xM - xI, 2) + pow(yM - yI, 2));
-// }
+double vector_length(double xI, double yI, double xM, double yM) {
+    return sqrt(pow(xM - xI, 2) + pow(yM - yI, 2)); // kiến thức toán 10 sgk mới
+}
 
 int main() {
     double xC{}, yC{}, R{}, xM{}, yM{};
@@ -17,7 +13,9 @@ int main() {
     std::cin >> R;
     std::cout << "Nhap toa do diem M(xM, yM)? ";
     std::cin >> xM >> yM;
-    double IM{twoPointVectorLength(xC, yC, xM, yM)};
+
+    double const IM{vector_length(xC, yC, xM, yM)};
+
     if (R == IM)
         std::cout << "M nam tren C()" << std::endl;
     else if (R > IM)

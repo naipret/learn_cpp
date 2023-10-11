@@ -4,7 +4,7 @@ int stringToInteger(char temp) {
     return (char(temp) - 48);
 }
 
-int sumab(int temp) {
+int sumab(int const temp) {
     if (temp < 10) {
         return temp;
     } else {

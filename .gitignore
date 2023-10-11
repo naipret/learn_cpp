@@ -42,8 +42,13 @@
 
 !project/learn_cpp_header/
 # alow all .c and .cpp files
-!project/learn_cpp_header/*c
-!project/learn_cpp_header/*cpp
+!project/learn_cpp_header/*.c
+!project/learn_cpp_header/*.cpp
+
+!project/header_guard_example/
+# alow all .c and .cpp files
+!project/header_guard_example/*.c
+!project/header_guard_example/*.cpp
 
 #! OTHER IN ROOT FOLDERS
 !_Makefile
