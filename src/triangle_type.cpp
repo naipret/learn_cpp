@@ -3,22 +3,22 @@
 #include <iostream>
 
 // forward declarations
-bool equilateral_triangle(const double &a, const double &b, const double &c);
-bool isosceles_right_triangle(const double &a, const double &b, const double &c);
-bool isosceles_triangle(const double &a, const double &b, const double &c);
-bool right_triangle(const double &a, const double &b, const double &c);
-bool obtuse_triangle(const double &a, const double &b, const double &c);
-bool acute_triangle(const double &a, const double &b, const double &c);
+bool equilateralTriangle(const double &a, const double &b, const double &c);
+bool isoscelesRightTriangle(const double &a, const double &b, const double &c);
+bool isoscelesTriangle(const double &a, const double &b, const double &c);
+bool rightTriangle(const double &a, const double &b, const double &c);
+bool obtuseTriangle(const double &a, const double &b, const double &c);
+bool acuteTriangle(const double &a, const double &b, const double &c);
 
-std::string triangle_type(const double &a, const double &b, const double &c) {
+std::string triangleType(const double &a, const double &b, const double &c) {
     if (a + b > c && a + c > b && b + c > a) {
-        if (equilateral_triangle(a, b, c)) {
+        if (equilateralTriangle(a, b, c)) {
             return "Tam giac deu";
-        } else if (isosceles_right_triangle(a, b, c)) {
+        } else if (isoscelesRightTriangle(a, b, c)) {
             return "Tam giac vuong can";
-        } else if (isosceles_triangle(a, b, c)) {
+        } else if (isoscelesTriangle(a, b, c)) {
             return "Tam giac can";
-        } else if (right_triangle(a, b, c)) {
+        } else if (rightTriangle(a, b, c)) {
             return "Tam giac vuong";
         } else {
             return "Tam giac thuong";
@@ -28,19 +28,19 @@ std::string triangle_type(const double &a, const double &b, const double &c) {
     }
 }
 
-std::string advanced_triangle_type(const double &a, const double &b, const double &c) {
+std::string advancedTriangleType(const double &a, const double &b, const double &c) {
     if (a + b > c && a + c > b && b + c > a) {
-        if (equilateral_triangle(a, b, c)) {
+        if (equilateralTriangle(a, b, c)) {
             return "Tam giac deu";
-        } else if (isosceles_right_triangle(a, b, c)) {
+        } else if (isoscelesRightTriangle(a, b, c)) {
             return "Tam giac vuong can";
-        } else if (isosceles_triangle(a, b, c)) {
+        } else if (isoscelesTriangle(a, b, c)) {
             return "Tam giac can";
-        } else if (right_triangle(a, b, c)) {
+        } else if (rightTriangle(a, b, c)) {
             return "Tam giac vuong";
-        } else if (obtuse_triangle(a, b, c)) {  // add obtuse triangle
+        } else if (obtuseTriangle(a, b, c)) {  // add obtuse triangle
             return "Tam giac tu";
-        } else if (acute_triangle(a, b, c)) {  // add acute triangle
+        } else if (acuteTriangle(a, b, c)) {  // add acute triangle
             return "Tam giac nhon";
         } else {
             return "Tam giac thuong";
@@ -50,11 +50,11 @@ std::string advanced_triangle_type(const double &a, const double &b, const doubl
     }
 }
 
-// bool similar_triangle() {
+// bool similarTriangle() {
 
 // }
 
-bool equilateral_triangle(const double &a, const double &b, const double &c) {
+bool equilateralTriangle(const double &a, const double &b, const double &c) {
     if (a == b && b == c) {
         return true;
     } else {
@@ -62,7 +62,7 @@ bool equilateral_triangle(const double &a, const double &b, const double &c) {
     }
 }
 
-bool isosceles_right_triangle(const double &a, const double &b, const double &c) {
+bool isoscelesRightTriangle(const double &a, const double &b, const double &c) {
     if (((a * a == b * b + c * c) && (b == c)) || ((b * b == a * a + c * c) && (a == c)) ||
         ((c * c == a * a + b * b) && (a == b))) {
         return true;
@@ -71,7 +71,7 @@ bool isosceles_right_triangle(const double &a, const double &b, const double &c)
     }
 }
 
-bool isosceles_triangle(const double &a, const double &b, const double &c) {
+bool isoscelesTriangle(const double &a, const double &b, const double &c) {
     if (a == b || b == c || a == c) {
         return true;
     } else {
@@ -79,7 +79,7 @@ bool isosceles_triangle(const double &a, const double &b, const double &c) {
     }
 }
 
-bool right_triangle(const double &a, const double &b, const double &c) {
+bool rightTriangle(const double &a, const double &b, const double &c) {
     if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == a * a + b * b)) {
         return true;
     } else {
@@ -87,7 +87,7 @@ bool right_triangle(const double &a, const double &b, const double &c) {
     }
 }
 
-bool obtuse_triangle(const double &a, const double &b, const double &c) {
+bool obtuseTriangle(const double &a, const double &b, const double &c) {
     if (a * a > b * b + c * c || b * b > a * a + c * c || c * c > a * a + b * b) {
         return true;
     } else {
@@ -95,7 +95,7 @@ bool obtuse_triangle(const double &a, const double &b, const double &c) {
     }
 }
 
-bool acute_triangle(const double &a, const double &b, const double &c) {
+bool acuteTriangle(const double &a, const double &b, const double &c) {
     if (a * a < b * b + c * c && b * b < a * a + c * c && c * c < a * a + b * b) {
         return true;
     } else {
