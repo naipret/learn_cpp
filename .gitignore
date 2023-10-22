@@ -40,17 +40,32 @@
 !project/benchmark_sorting_algorithms/*.c
 !project/benchmark_sorting_algorithms/*.cpp
 
-!project/learn_cpp_header/
+!project/fast_IO_for_competitive_programming/
 # alow all .c and .cpp files
-!project/learn_cpp_header/*.c
-!project/learn_cpp_header/*.cpp
+!project/fast_IO_for_competitive_programming/*.c
+!project/fast_IO_for_competitive_programming/*.cpp
 
 !project/header_guard_example/
 # alow all .c and .cpp files
 !project/header_guard_example/*.c
 !project/header_guard_example/*.cpp
 
-#! OTHER IN ROOT FOLDERS
+!project/learn_cpp_header/
+# alow all .c and .cpp files
+!project/learn_cpp_header/*.c
+!project/learn_cpp_header/*.cpp
+
+!project/learn_cpp_header/fstream/
+# alow all .c and .cpp files
+!project/learn_cpp_header/fstream/*.c
+!project/learn_cpp_header/fstream/*.cpp
+
+!project/learn_cpp_header/iostream/
+# alow all .c and .cpp files
+!project/learn_cpp_header/iostream/*.c
+!project/learn_cpp_header/iostream/*.cpp
+
+#! OTHER IN ROOT FOLDER
 !_Makefile
 !.gitignore
 !bettercomments_extension.png
