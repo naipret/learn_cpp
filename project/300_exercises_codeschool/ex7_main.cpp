@@ -4,7 +4,7 @@ int main() {
     int a{}, b{};
     std::cout << "Nhap a, b: ";
     std::cin >> a >> b;
-    double const x{(-b) * 1.0 / a};
+    const double x{(double(-b)) * 1.0 / double(a)};
     std::cout << "x = " << x << std::endl;
     return 0;
 }

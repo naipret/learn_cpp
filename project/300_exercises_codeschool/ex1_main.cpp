@@ -8,8 +8,8 @@ int main() {
     std::cout << "Nhap dien tich S: ";
     double area{};
     std::cin >> area;
-    double const radius{sqrt(area / (4 * M_PI))};
-    std::cout << "The tich V = " << 4.0 / 3 * M_PI * pow(radius, 3)
+    const double radius{sqrt(area / (4.0 * M_PI))};
+    std::cout << "The tich V = " << 4.0 / 3.0 * M_PI * pow(radius, 3.0)
               << std::endl;
     return 0;
 }
