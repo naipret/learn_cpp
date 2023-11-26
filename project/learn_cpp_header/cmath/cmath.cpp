@@ -10,12 +10,12 @@ int main() {
     cout << "sqrt(5) = " << sqrt(5) << endl;
     cout << "cbrt(1000) = " << cbrt(1000) << endl
          << endl;
-    cout << "floor(2.3) = " << floor(2.3) << endl;
-    cout << "floor(2.8) = " << floor(2.8) << endl;
-    cout << "round(2.3) = " << round(2.3) << endl;
-    cout << "round(2.8) = " << round(2.8) << endl;
-    cout << "ceil(2.3) = " << ceil(2.3) << endl;
-    cout << "ceil(2.8) = " << ceil(2.8) << endl
+    cout << "floor(2.3) = " << floor(2.3) << endl;  // = 2 // dưới
+    cout << "floor(2.8) = " << floor(2.8) << endl;  // = 2
+    cout << "round(2.3) = " << round(2.3) << endl;  // = 2 // trung
+    cout << "round(2.8) = " << round(2.8) << endl;  // = 3
+    cout << "ceil(2.3) = " << ceil(2.3) << endl;    // = 3 // trên
+    cout << "ceil(2.8) = " << ceil(2.8) << endl     // = 3
          << endl;
     cout << "min(5, 10) = " << min(5, 10) << endl;
     cout << "max(5, 10) = " << max(5, 10) << endl;
