@@ -4,7 +4,7 @@ int stringToInteger(char temp) {
     return (char(temp) - 48);
 }
 
-int sumab(const int temp) {
+int sumAb(const int temp) {
     if (temp < 10) {
         return temp;
     } else {
@@ -27,7 +27,7 @@ int main() {
             continue;
         }
         int s1 = stringToInteger(SIN[0]) + stringToInteger(SIN[2]) + stringToInteger(SIN[4]) + stringToInteger(SIN[6]);
-        int s2 = sumab(stringToInteger(SIN[1]) * 2) + sumab(stringToInteger(SIN[3]) * 2) + sumab(stringToInteger(SIN[5]) * 2) + sumab(stringToInteger(SIN[7]) * 2);
+        int s2 = sumAb(stringToInteger(SIN[1]) * 2) + sumAb(stringToInteger(SIN[3]) * 2) + sumAb(stringToInteger(SIN[5]) * 2) + sumAb(stringToInteger(SIN[7]) * 2);
         const double checkDbl{(s1 + s2 + stringToInteger(SIN[8])) / 10.0};
         const int checkInt{(s1 + s2 + stringToInteger(SIN[8])) / 10};
         if (checkDbl == (checkInt * 1.0)) {

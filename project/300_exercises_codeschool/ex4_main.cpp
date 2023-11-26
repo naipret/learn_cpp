@@ -1,7 +1,7 @@
 #include <cmath>  // để sài hàm tính căn bậc 2 "sqrt()"
 #include <iostream>
 
-std::string triangle_type(const double &a, const double &b, const double &c) {
+std::string triangleType(const double &a, const double &b, const double &c) {
     if (a + b > c && a + c > b && b + c > a) {
         if (a == b && b == c) {
             return "Tam giac deu";
@@ -25,7 +25,7 @@ int main() {
     std::cout << "Nhap 3 canh cua tam giac: ";
     std::cin >> a >> b >> c;
 
-    std::cout << triangle_type(a, b, c) << std::endl;
+    std::cout << triangleType(a, b, c) << std::endl;
 
     const double p{(a + b + c) / 2.0};
     const double S{sqrt(p * (p - a) * (p - b) * (p - c))}; // công thức Heron toán 10 sgk mới

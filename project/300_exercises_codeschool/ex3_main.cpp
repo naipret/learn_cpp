@@ -1,7 +1,7 @@
 #include <cmath>
 #include <iostream>
 
-double vector_length(const double &xI, const double &yI, const double &xM, const double &yM) {
+double vectorLength(const double &xI, const double &yI, const double &xM, const double &yM) {
     return sqrt(pow(xM - xI, 2.0) + pow(yM - yI, 2.0)); // kiến thức toán 10 sgk mới
 }
 
@@ -14,13 +14,13 @@ int main() {
     std::cout << "Nhap toa do diem M(xM, yM)? ";
     std::cin >> xM >> yM;
 
-    const double IM{vector_length(xC, yC, xM, yM)};
+    const double lengthIM{vectorLength(xC, yC, xM, yM)};
 
-    if (R == IM)
+    if (R == lengthIM)
         std::cout << "M nam tren C()" << std::endl;
-    else if (R > IM)
+    else if (R > lengthIM)
         std::cout << "M nam trong C()" << std::endl;
-    else if (R < IM)
+    else if (R < lengthIM)
         std::cout << "M nam ngoai C()" << std::endl;
     return 0;
 }

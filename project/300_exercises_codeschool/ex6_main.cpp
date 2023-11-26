@@ -1,22 +1,22 @@
 #include <iostream>
 
-void bubbleSort(int input_arr[]) {
+void bubbleSort(int inputArr[]) {
     for (int i = 0; i < 3; ++i) {
         for (int j = i + 1; j < 3; ++j) {
-            if (input_arr[i] > input_arr[j]) {
-                std::swap(input_arr[i], input_arr[j]);
+            if (inputArr[i] > inputArr[j]) {
+                std::swap(inputArr[i], inputArr[j]);
             }
         }
     }
 }
 
 int main() {
-    int input_arr[3]{};
-    std::cin >> input_arr[0] >> input_arr[1] >> input_arr[2];
-    bubbleSort(input_arr);
+    int inputArr[3]{};
+    std::cin >> inputArr[0] >> inputArr[1] >> inputArr[2];
+    bubbleSort(inputArr);
     std::cout << "Tang dan: ";
     for (int i = 0; i < 3; ++i)
-        std::cout << input_arr[i] << " ";
+        std::cout << inputArr[i] << " ";
     std::cout << std::endl;
     return 0;
 }
