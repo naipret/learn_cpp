@@ -35,16 +35,6 @@
 !project/300_exercises_codeschool/*.c
 !project/300_exercises_codeschool/*.cpp
 
-!project/benchmark_sorting_algorithms/
-# alow all .c and .cpp files
-!project/benchmark_sorting_algorithms/*.c
-!project/benchmark_sorting_algorithms/*.cpp
-
-!project/fast_IO_for_competitive_programming/
-# alow all .c and .cpp files
-!project/fast_IO_for_competitive_programming/*.c
-!project/fast_IO_for_competitive_programming/*.cpp
-
 !project/header_guard_example/
 # alow all .c and .cpp files
 !project/header_guard_example/*.c
@@ -55,6 +45,11 @@
 !project/learn_cpp_header/*.c
 !project/learn_cpp_header/*.cpp
 
+!project/learn_cpp_header/cmath
+# alow all .c and .cpp files
+!project/learn_cpp_header/cmath/*.c
+!project/learn_cpp_header/cmath/*.cpp
+
 !project/learn_cpp_header/fstream/
 # alow all .c and .cpp files
 !project/learn_cpp_header/fstream/*.c
@@ -64,6 +59,16 @@
 # alow all .c and .cpp files
 !project/learn_cpp_header/iostream/*.c
 !project/learn_cpp_header/iostream/*.cpp
+
+!project/off_topic
+# alow all .c and .cpp files
+!project/off_topic/*.c
+!project/off_topic/*.cpp
+
+!project/optimize_cpp
+# alow all .c and .cpp files
+!project/optimize_cpp/*.c
+!project/optimize_cpp/*.cpp
 
 #! OTHER IN ROOT FOLDER
 !_Makefile
