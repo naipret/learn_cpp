@@ -8,7 +8,7 @@ int main() {
 
     // Nối chuỗi
     greeting += "World!";
-
+    
     // In ra kết quả
     std::cout << greeting << std::endl;
 
@@ -28,6 +28,17 @@ int main() {
     } else {
         std::cout << "Hai chuỗi khác nhau." << std::endl;
     }
+
+    // Yêu cầu người dùng nhập họ và tên
+    std::string firstName, lastName;
+    std::cout << "Nhập họ của bạn: ";
+    std::getline(std::cin >> std::ws, firstName);
+
+    std::cout << "Nhập tên của bạn: ";
+    std::getline(std::cin >> std::ws, lastName);
+
+    // In ra họ và tên
+    std::cout << "Xin chào, " << firstName << " " << lastName << "!" << std::endl;
 
     return 0;
 }
