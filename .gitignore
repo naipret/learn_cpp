@@ -69,6 +69,7 @@
 # alow all .c and .cpp files
 !project/optimize_cpp/*.c
 !project/optimize_cpp/*.cpp
+!project/off_topic/debug_option.txt
 
 #! OTHER IN ROOT FOLDER
 !_Makefile

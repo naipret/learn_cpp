@@ -1,0 +1,12 @@
+https://stackoverflow.com/questions/152555/h-or-hpp-for-your-class-definitions
+
+When debug use Step Into, or by pressing the F11 shortcut key.
+
+================= STEP INTO =================
+The step into command executes the next statement in the normal execution path of the program, and then pauses execution of the program so we can examine the program’s state using the debugger. If the statement being executed contains a function call, step into causes the program to jump to the top of the function being called, where it will pause.
+
+================= STEP OVER =================
+Like step into, The step over command executes the next statement in the normal execution path of the program. However, whereas step into will enter function calls and execute them line by line, step over will execute an entire function without stopping and return control to you after the function has been executed.
+
+================= STEP OUT ==================
+Unlike the other two stepping commands, Step out does not just execute the next line of code. Instead, it executes all remaining code in the function currently being executed, and then returns control to you when the function has returned.
