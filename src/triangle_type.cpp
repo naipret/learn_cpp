@@ -3,14 +3,14 @@
 #include <iostream>
 
 // forward declarations
-inline bool equilateralTriangle(const double &a, const double &b, const double &c);
-inline bool isoscelesRightTriangle(const double &a, const double &b, const double &c);
-inline bool isoscelesTriangle(const double &a, const double &b, const double &c);
-inline bool rightTriangle(const double &a, const double &b, const double &c);
-inline bool obtuseTriangle(const double &a, const double &b, const double &c);
-inline bool acuteTriangle(const double &a, const double &b, const double &c);
+bool equilateralTriangle(const double &a, const double &b, const double &c);
+bool isoscelesRightTriangle(const double &a, const double &b, const double &c);
+bool isoscelesTriangle(const double &a, const double &b, const double &c);
+bool rightTriangle(const double &a, const double &b, const double &c);
+bool obtuseTriangle(const double &a, const double &b, const double &c);
+bool acuteTriangle(const double &a, const double &b, const double &c);
 
-inline std::string triangleType(const double &a, const double &b, const double &c) {
+std::string triangleType(const double &a, const double &b, const double &c) {
     if (a + b > c && a + c > b && b + c > a) {
         if (equilateralTriangle(a, b, c)) {
             return "Tam giac deu";
@@ -28,7 +28,7 @@ inline std::string triangleType(const double &a, const double &b, const double &
     }
 }
 
-inline std::string advancedTriangleType(const double &a, const double &b, const double &c) {
+std::string advancedTriangleType(const double &a, const double &b, const double &c) {
     if (a + b > c && a + c > b && b + c > a) {
         if (equilateralTriangle(a, b, c)) {
             return "Tam giac deu";
@@ -50,11 +50,11 @@ inline std::string advancedTriangleType(const double &a, const double &b, const 
     }
 }
 
-// inline bool similarTriangle() {
+// bool similarTriangle() {
 
 // }
 
-inline bool equilateralTriangle(const double &a, const double &b, const double &c) {
+bool equilateralTriangle(const double &a, const double &b, const double &c) {
     if (a == b && b == c) {
         return true;
     } else {
@@ -62,7 +62,7 @@ inline bool equilateralTriangle(const double &a, const double &b, const double &
     }
 }
 
-inline bool isoscelesRightTriangle(const double &a, const double &b, const double &c) {
+bool isoscelesRightTriangle(const double &a, const double &b, const double &c) {
     if (((a * a == b * b + c * c) && (b == c)) || ((b * b == a * a + c * c) && (a == c)) ||
         ((c * c == a * a + b * b) && (a == b))) {
         return true;
@@ -71,7 +71,7 @@ inline bool isoscelesRightTriangle(const double &a, const double &b, const doubl
     }
 }
 
-inline bool isoscelesTriangle(const double &a, const double &b, const double &c) {
+bool isoscelesTriangle(const double &a, const double &b, const double &c) {
     if (a == b || b == c || a == c) {
         return true;
     } else {
@@ -79,7 +79,7 @@ inline bool isoscelesTriangle(const double &a, const double &b, const double &c)
     }
 }
 
-inline bool rightTriangle(const double &a, const double &b, const double &c) {
+bool rightTriangle(const double &a, const double &b, const double &c) {
     if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == a * a + b * b)) {
         return true;
     } else {
@@ -87,7 +87,7 @@ inline bool rightTriangle(const double &a, const double &b, const double &c) {
     }
 }
 
-inline bool obtuseTriangle(const double &a, const double &b, const double &c) {
+bool obtuseTriangle(const double &a, const double &b, const double &c) {
     if (a * a > b * b + c * c || b * b > a * a + c * c || c * c > a * a + b * b) {
         return true;
     } else {
@@ -95,7 +95,7 @@ inline bool obtuseTriangle(const double &a, const double &b, const double &c) {
     }
 }
 
-inline bool acuteTriangle(const double &a, const double &b, const double &c) {
+bool acuteTriangle(const double &a, const double &b, const double &c) {
     if (a * a < b * b + c * c && b * b < a * a + c * c && c * c < a * a + b * b) {
         return true;
     } else {
