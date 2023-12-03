@@ -25,9 +25,21 @@
 !bin/
 # IGNORE all, blank folder only
 !bin/.gitkeep
+!bin/Makefile
 
 #! PROJECT FOLDERS
 !project/
+
+!project/28tech/
+!project/28tech/buoi1/
+# alow all .c and .cpp files | 300_exercises_codeschool.pdf
+!project/28tech/buoi1/28TECH BUOI 1.pdf
+!project/28tech/buoi1/*.c
+!project/28tech/buoi1/*.cpp
+!project/28tech/buoi2/
+!project/28tech/buoi2/28TECH BUOI 2.pdf
+!project/28tech/buoi2/*.c
+!project/28tech/buoi2/*.cpp
 
 !project/300_exercises_codeschool/
 # alow all .c and .cpp files | 300_exercises_codeschool.pdf
