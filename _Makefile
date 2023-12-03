@@ -1,32 +1,32 @@
-#* tasks.json is dumb:v
+#! ------------------ change this only ------------------
+fileDirectory := # path/to/your/cpp/file
 
-#! -------------------- change this --------------------
-FILEDIR    := #path/to/your/cpp/file
-EXECUTABLE := #buildwithmakefile
-EXTENSION  := #.exe
+executableName      := # buildwithmakefile
+executableExtension := # .exe
 
-HEADERNAME := #this_is_a_header_name
-#! -----------------------------------------------------
+sourceFileName      := # mycustomsrcfile
+sourceFileExtension := # .cpp
 
-CXX           := g++
-OPTIMIZE_FLAG := -O3
-WARNING_FLAGS := -Wall -Werror -Wpedantic
-DEBUG_FLAG    := -g
+CXX           := # g++ || gcc
+optimizeFlags := # -O2
+warningFlags  := # -Wall -Wextra -Wpedantic -Werror
+debugFlags    := # -g
+#! ------------------------------------------------------
 
-BIN     := bin
-SRC     := src
-INCLUDE := include
+BIN     := bin/
+SRC     := src/
+INCLUDE := include/
 
-#! require FILEDIR EXECUTABLE EXTENSION
+#! require fileDirectory executableName executableExtension
 single:
-	${CXX} ${OPTIMIZE_FLAG} ${WARNING_FLAGS} -fdiagnostics-color=always ${DEBUG_FLAG} ${FILEDIR} -o ${BIN}/${EXECUTABLE}${EXTENSION}
+	${CXX} ${optimizeFlags} ${warningFlags} -fdiagnostics-color=always ${debugFlags} ${fileDirectory} -o ${BIN}${executableName}${executableExtension}
 
-#! require FILEDIR EXECUTABLE EXTENSION HEADERNAME
+#! require fileDirectory executableName executableExtension sourceFileName sourceFileExtension
 multiple:
-	${CXX} ${OPTIMIZE_FLAG} ${WARNING_FLAGS} -fdiagnostics-color=always ${DEBUG_FLAG} ${FILEDIR} ${INCLUDE}/${HEADERNAME}.hpp ${SRC}/${HEADERNAME}.cpp -o ${BIN}/${EXECUTABLE}${EXTENSION}
+	${CXX} ${optimizeFlags} ${warningFlags} -fdiagnostics-color=always ${debugFlags} ${fileDirectory} ${SRC}${sourceFileName}${sourceFileExtension} -I${INCLUDE} -o ${BIN}${executableName}${executableExtension}
 
-cleanfile:
-	rm $(BIN)/${EXECUTABLE}${EXTENSION}
+clean:
+	rm ${BIN}${executableName}${executableExtension}
 
 cleanall:
-	rm $(BIN)/*
+	rm ${BIN}*.exe
