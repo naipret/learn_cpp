@@ -1,5 +1,6 @@
+#include <stdlib.h>  // to use system("clear");
+
 #include <iostream>
-#include <stdlib.h> // to use system("clear");
 
 void pressEnter() {
     std::cout << std::endl;
@@ -18,11 +19,11 @@ void pressEnter() {
 // └── buildtools
 //     └── test.txt
 
-int main () {
+int main() {
     system("clear");
 
     //! __ 0. IOSTREAM __
-    
+
     std::cout << "A. Co nhung gi trong thu vien \"IOSTREAM\":D\n";
     std::cout << "|-- 1. ISTREAM (input stream):  Thu vien chung dung de \"NHAP\" du lieu gi do\n";
     std::cout << "|-- 2. OSTREAM (output stream): Thu vien chung dung de \"XUAT\" du lieu gi do\n";
@@ -48,7 +49,7 @@ int main () {
     std::cout << "|-- 1.2. ";
 
     // 2. gcount : Get character count (Lay ki tu chu cai duoc input)
-    // std::cout << 
+    // std::cout <<
 }
 
 // https://cplusplus.com/reference/istream/istream/
