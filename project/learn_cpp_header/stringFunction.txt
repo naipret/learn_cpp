@@ -1,0 +1,22 @@
+FUNCTION
+
+Convert from strings
+stoi	Convert string to integer (function template)
+stol	Convert string to long int (function template)
+stoul	Convert string to unsigned integer (function template)
+stoll	Convert string to long long (function template)
+stoull	Convert string to unsigned long long (function template)
+stof	Convert string to float (function template)
+stod	Convert string to double (function template)
+stold	Convert string to long double (function template)
+
+Convert to strings
+to_string	Convert numerical value to string (function)
+to_wstring	Convert numerical value to wide string (function)
+
+Range access
+begin	Iterator to beginning (function template)
+end	    Iterator to end (function template)
+
+https://cplusplus.com/reference/string/
+https://cplusplus.com/reference/string/basic_string/
