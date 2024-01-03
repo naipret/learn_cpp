@@ -1,11 +1,7 @@
 #include <cmath>
 #include <iostream>
 
-#include "../../include/vector_maths.hpp"
-
-// double vector_length(double xI, double yI, double xM, double yM) {
-//     return sqrt(pow(xM - xI, 2) + pow(yM - yI, 2));
-// }
+#include "cst_vector_maths.hpp"
 
 int main() {
     double xC{}, yC{}, R{}, xM{}, yM{};
@@ -15,7 +11,9 @@ int main() {
     std::cin >> R;
     std::cout << "Nhap toa do diem M(xM, yM)? ";
     std::cin >> xM >> yM;
-    double IM{twoPointVectorLength(xC, yC, xM, yM)};
+
+    double IM{cst::vectorLength(xC, yC, xM, yM)};
+
     if (R == IM)
         std::cout << "M nam tren C()" << std::endl;
     else if (R > IM)
@@ -24,3 +22,6 @@ int main() {
         std::cout << "M nam ngoai C()" << std::endl;
     return 0;
 }
+
+//! HOW TO COMPILE
+//! example: C:\msys64\ucrt64\bin\g++.exe -Wall -Wextra -Wpedantic -fdiagnostics-color=always -g D:\Code\learn_cpp\project\header_guard_example\ex3_main.cpp -ID:\Code\learn_cpp\include\ D:\Code\learn_cpp\src\cst_vector_maths.cpp -o D:\Code\learn_cpp\bin\ex3_main.exe
