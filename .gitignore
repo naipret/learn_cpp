@@ -56,38 +56,24 @@
 # alow all .c and .cpp files
 !project/learn_cpp_header/*.c
 !project/learn_cpp_header/*.cpp
-
-!project/learn_cpp_header/cmath
-# alow all .c and .cpp files
-!project/learn_cpp_header/cmath/*.c
-!project/learn_cpp_header/cmath/*.cpp
-
-!project/learn_cpp_header/fstream/
-# alow all .c and .cpp files
-!project/learn_cpp_header/fstream/*.c
-!project/learn_cpp_header/fstream/*.cpp
-
-!project/learn_cpp_header/iostream/
-# alow all .c and .cpp files
-!project/learn_cpp_header/iostream/*.c
-!project/learn_cpp_header/iostream/*.cpp
-
-!project/learn_cpp_header/string
-# alow all .c and .cpp files
-!project/learn_cpp_header/string/*.c
-!project/learn_cpp_header/string/*.cpp
-!project/learn_cpp_header/string/stringFunction.txt
+!project/learn_cpp_header/stringFunction.txt
 
 !project/off_topic
 # alow all .c and .cpp files
 !project/off_topic/*.c
 !project/off_topic/*.cpp
+!project/off_topic/c++11_to_c++20.md
 
-!project/optimize_cpp
+!project/optimize_cpp_skills
 # alow all .c and .cpp files
-!project/optimize_cpp/*.c
-!project/optimize_cpp/*.cpp
-!project/off_topic/debug_option.txt
+!project/optimize_cpp_skills/*.c
+!project/optimize_cpp_skills/*.cpp
+!project/optimize_cpp_skills/gcd_lcm.txt
+
+!project/real_exam
+# alow all .c and .cpp files
+!project/real_exam/*.c
+!project/real_exam/*.cpp
 
 #! OTHER IN ROOT FOLDER
 !_Makefile
