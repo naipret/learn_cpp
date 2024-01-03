@@ -1,8 +1,7 @@
-#include <algorithm>
-#include <iostream> // Để sử dụng std::sort()
+#include <algorithm>  // Để sử dụng std::sort()
+#include <iostream>
 
 int main() {
-    
     int myArray[] = {5, 2, 8, 1, 7};
 
     // Sử dụng std::sort để sắp xếp mảng
