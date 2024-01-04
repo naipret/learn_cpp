@@ -18,6 +18,9 @@ SRC     := src/
 INCLUDE := include/
 
 #! require fileDirectory executableName executableExtension
+cleanall:
+	rm ${BIN}*.exe
+
 single:
 	${CXX} ${optimizeFlags} ${warningFlags} -fdiagnostics-color=always ${debugFlags} ${fileDirectory} -o ${BIN}${executableName}${executableExtension}
 
@@ -27,6 +30,3 @@ multiple:
 
 clean:
 	rm ${BIN}${executableName}${executableExtension}
-
-cleanall:
-	rm ${BIN}*.exe
