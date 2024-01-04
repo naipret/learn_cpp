@@ -1,4 +1,4 @@
-#include "cst_maths.hpp"
+#include "maths.hpp"
 
 #include <cmath>
 #include <string>
@@ -32,5 +32,32 @@ namespace cst {
                 return "Phuong trinh co 2 nghiem:\nx1 = " + std::to_string((-b + sqrt(delta)) / (2.0 * a)) + "\nx2 = " + std::to_string((-b - sqrt(delta)) / (2.0 * a));
             }
         }
+    }
+    // int gcd(int a, int b) {
+    //     if (a == 0)
+    //         return b;
+    //     if (b == 0)
+    //         return a;
+    //     if (a == b)
+    //         return a;
+    //     if (a > b)
+    //         return gcd(a - b, b);
+    //     return gcd(a, b - a);
+    // }  // Recursive Subtraction
+    int gcd(int a, int b) {
+        if (a == 0)
+            return b;
+        return gcd(b % a, a);
+    }
+    long long gcd(long long a, long long b) {
+        if (a == 0)
+            return b;
+        return gcd(b % a, a);
+    }
+    int lcm(int a, int b) {
+        return (a * b) / (gcd(a, b));
+    }
+    long long lcm(long long a, long long b) {
+        return (a * b) / (gcd(a, b));
     }
 }  // namespace cst

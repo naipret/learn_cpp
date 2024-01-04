@@ -1,6 +1,6 @@
-#include <cmath>  // to use std::sqrt(), std::pow()
+#include "vector_maths.hpp"
 
-#include "cst_vector_maths.hpp"
+#include <cmath>  // to use std::sqrt(), std::pow()
 
 namespace cst {
     double vectorLength(const double &xM, const double &yM, const double &xN = 0.0,

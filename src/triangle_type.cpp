@@ -1,4 +1,4 @@
-#include "cst_triangle_type.hpp"
+#include "triangle_type.hpp"
 
 #include <string>
 
