@@ -1,7 +1,7 @@
 #include <cmath>
 #include <iostream>
 
-#include "cst_vector_maths.hpp"
+#include "vector_maths.hpp"
 
 int main() {
     double xC{}, yC{}, R{}, xM{}, yM{};
@@ -24,4 +24,4 @@ int main() {
 }
 
 //! HOW TO COMPILE
-//! example: C:\msys64\ucrt64\bin\g++.exe -Wall -Wextra -Wpedantic -fdiagnostics-color=always -g D:\Code\learn_cpp\project\header_guard_example\ex3_main.cpp -ID:\Code\learn_cpp\include\ D:\Code\learn_cpp\src\cst_vector_maths.cpp -o D:\Code\learn_cpp\bin\ex3_main.exe
+//! example: C:\msys64\ucrt64\bin\g++.exe -Wall -Wextra -Wpedantic -fdiagnostics-color=always -g D:\Code\learn_cpp\project\header_guard_example\ex3_main.cpp -ID:\Code\learn_cpp\include\ D:\Code\learn_cpp\src\vector_maths.cpp -o D:\Code\learn_cpp\bin\ex3_main.exe

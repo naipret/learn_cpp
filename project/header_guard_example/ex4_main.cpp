@@ -1,7 +1,7 @@
 #include <cmath>  //to use sqrt()
 #include <iostream>
 
-#include "cst_triangle_type.hpp"
+#include "triangle_type.hpp"
 
 int main() {
     double a{}, b{}, c{};
@@ -17,4 +17,4 @@ int main() {
 }
 
 //! HOW TO COMPILE
-//! example: C:\msys64\ucrt64\bin\g++.exe -Wall -Wextra -Wpedantic -fdiagnostics-color=always -g D:\Code\learn_cpp\project\header_guard_example\ex4_main.cpp -ID:\Code\learn_cpp\include\ D:\Code\learn_cpp\src\cst_triangle_type.cpp -o D:\Code\learn_cpp\bin\ex4_main.exe
+//! example: C:\msys64\ucrt64\bin\g++.exe -Wall -Wextra -Wpedantic -fdiagnostics-color=always -g D:\Code\learn_cpp\project\header_guard_example\ex4_main.cpp -ID:\Code\learn_cpp\include\ D:\Code\learn_cpp\src\triangle_type.cpp -o D:\Code\learn_cpp\bin\ex4_main.exe
