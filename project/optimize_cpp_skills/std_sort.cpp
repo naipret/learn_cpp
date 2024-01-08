@@ -13,5 +13,14 @@ int main() {
         std::cout << myArray[i] << " ";
     }
 
+    // Sử dụng std::sort để sắp xếp mảng giam dan
+    std::sort(myArray, std::end(myArray), std::greater());
+
+    // In mảng sau khi đã sắp xếp
+    std::cout << "Mảng sau khi sắp xếp: ";
+    for (int i = 0; i < 5; ++i) {
+        std::cout << myArray[i] << " ";
+    }
+
     return 0;
 }
