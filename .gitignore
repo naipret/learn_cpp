@@ -76,7 +76,7 @@
 !project/real_exam/*.cpp
 
 #! OTHER IN ROOT FOLDER
-!_Makefile
+!Makefile
 !.gitignore
 !bettercomments_extension.png
 !README.md
