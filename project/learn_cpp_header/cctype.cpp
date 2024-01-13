@@ -30,3 +30,20 @@ int main() {
 
     return 0;
 }
+
+// 1. **Hàm Kiểm tra:**
+//   - `isalpha`: Kiểm tra xem một ký tự có phải là chữ cái không.
+//   - `isdigit`: Kiểm tra xem một ký tự có phải là chữ số không.
+//   - `isalnum`: Kiểm tra xem một ký tự có phải là chữ cái hoặc chữ số không.
+//   - `islower`, `isupper`: Kiểm tra xem một ký tự có phải là chữ thường hay chữ hoa không.
+
+// 2. **Hàm Chuyển đổi:**
+//   - `tolower`: Chuyển đổi một ký tự thành chữ thường.
+//   - `toupper`: Chuyển đổi một ký tự thành chữ hoa.
+
+// 3. **Hàm Kiểm tra ký tự đặc biệt:**
+//   - `isspace`: Kiểm tra xem một ký tự có phải là khoảng trắng không.
+//   - `iscntrl`: Kiểm tra xem một ký tự có phải là ký tự điều khiển không.
+
+// 4. **Hàm Kiểm tra chữ viết tắt:**
+//   - `isxdigit`: Kiểm tra xem một ký tự có phải là số thập lục phân không.
