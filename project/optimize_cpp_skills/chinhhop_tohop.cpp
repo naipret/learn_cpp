@@ -14,7 +14,7 @@ long long P(const long long n) {
 
 //! CHỈNH HỢP ký hiệu là A(k,n)
 long long A(const long long k, const long long n) {
-    if (k > n) {
+    if (n < 0 || k < 0 || k > n) {
         return -1LL;
     }
     return P(n) / P(n - k);
@@ -22,7 +22,7 @@ long long A(const long long k, const long long n) {
 
 //! TỔ HỢP ký hiệu là C(k,n)
 long long C(const long long k, const long long n) {
-    if (k > n) {
+    if (n < 0 || k < 0 || k > n) {
         return -1LL;
     }
     return A(k, n) / P(k);
