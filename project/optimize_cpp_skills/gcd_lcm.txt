@@ -1,7 +1,0 @@
-Thư viện <numeric> trong C++ chứa nhiều hàm toán học và thuật toán số học. Dưới đây là một số hàm quan trọng được cung cấp bởi thư viện này:
-
-GCD (Greatest Common Divisor):
-std::gcd: Tính ước chung lớn nhất của hai số.
-
-LCM (Least Common Multiple):
-std::lcm: Tính bội chung nhỏ nhất của hai số.
