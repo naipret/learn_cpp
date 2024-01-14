@@ -1,6 +1,7 @@
 #include "math.hpp"
 
 #include <cmath>  // to use std::sqrt(), std::pow()
+#include <iostream>
 
 namespace cst {
     bool isPrime(int n) {
@@ -26,6 +27,50 @@ namespace cst {
             if (n % i == 0LL || n % (i + 2LL) == 0LL)
                 return false;
         return true;
+    }
+    void primeFactorization(int n) {
+        while (n % 2 == 0) {
+            std::cout << '2' << '\t';
+            n /= 2;
+        }
+        while (n % 3 == 0) {
+            std::cout << '3' << '\t';
+            n /= 3;
+        }
+        int i{5};
+        while (n != 1) {
+            while (n % i == 0) {
+                std::cout << i << '\t';
+                n /= i;
+            }
+            while (n % (i + 2) == 0) {
+                std::cout << i + 2 << '\t';
+                n /= (i + 2);
+            }
+            i += 6;
+        }
+    }
+    void primeFactorization(long long n) {
+        while (n % 2LL == 0LL) {
+            std::cout << '2' << '\t';
+            n /= 2LL;
+        }
+        while (n % 3LL == 0) {
+            std::cout << '3' << '\t';
+            n /= 3LL;
+        }
+        long long i{5LL};
+        while (n != 1LL) {
+            while (n % i == 0LL) {
+                std::cout << i << '\t';
+                n /= i;
+            }
+            while (n % (i + 2LL) == 0LL) {
+                std::cout << i + 2LL << '\t';
+                n /= (i + 2LL);
+            }
+            i += 6;
+        }
     }
     int gcd(int a, int b) {
         if (a == 0)
