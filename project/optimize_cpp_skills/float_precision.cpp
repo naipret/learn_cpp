@@ -5,6 +5,7 @@ int main() {
     int a{}, b{};
     std::cin >> a >> b;
 
+    // Thay đổi số thập phân sẽ được hiển thị
     std::cout << std::fixed;
     std::cout << std::setprecision(2);
     
