@@ -7,10 +7,9 @@ constexpr int square(int x) {
 
 int main() {
     // Biến được khai báo với constexpr và giá trị được tính toán tại thời điểm biên dịch
-    constexpr int side = 5;
-    constexpr int area = square(side);
+    constexpr int side{5};
+    constexpr int area{square(side)};
 
-    // In ra kết quả
     std::cout << "Diện tích hình vuông có cạnh " << side << " là: " << area << std::endl;
 
     return 0;
