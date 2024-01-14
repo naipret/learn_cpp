@@ -27,26 +27,33 @@ long long C(const long long k, const long long n) {
     }
     return A(k, n) / P(k);
 }
+
 int main() {
     //! CHỈNH HỢP ký hiệu là A(k,n) (k trên n dưới): đọc là chỉnh hợp chập k của n
     // vd: A(3,6) = 6 * 5 * 4 = 120
     // vd: A(5,8) = 8 * 7 * 6 * 5 * 4 = 6720
-    //! A(k,n) = n! / (n - k)! hay = P(n) / P(n-k)
+    //! A(k,n) = n! / (n - k)! || A(k,n) = P(n) / P(n-k)
     // vd: A(5,7) = 7! / (7 - 5)! = 2520
     //! Trong máy tính Casio ký hiệu là nPr
-    // vd: 5P7 = 2520
+    // vd: 7P5 = 2520
     //! Chỉnh hợp là cách xếp có phân biệt!
     // vd: xếp A và B vào 2 chỗ ngồi, ta được 2 cách xếp: A,B ; B,A
     // trái với tổ hợp không phân biệt: A,B tương tự với B,A nên chỉ có 1 cách xếp
 
     //! TỔ HỢP ký hiệu là C(k,n) (k trên n dưới): đọc là tổ hợp chập k của n
+    // vd: C(3,6) = 20
+    // vd: C(5,8) = 56
+    //! C(k,n) = n! / ((n - k)! * k!) || C(k,n) = P(n) / (A(k,n) * P(k)) || C(k,n) = A(k,n) / P(k)
+    // vd: C(5,7) = 7! / (7 - 5)! * 5! = 21
+    //! Trong máy tính Casio ký hiệu là nCr
+    // vd: 7C5 = 21
+    //! Tổ hợp là cách xếp không phân biệt!
     // vd: khi chọn 3 bạn đề bầu làm ban cán sự lớp thì chọn ra 3 người trước rồi mới bỏ phiếu
     // thì khi này cả 3 người có thể làm bất kỳ chức vụ gì nên không cần phải phân biệt
-    //! => được tính theo công thức: C(k,n) = n! / ((n - k)! * k!) hay = P(n) / (A(k,n) * P(k)) hay = A(k,n) / P(k)
 
     int choose{};
     int n{}, k{};
-    std::cout << "1. Giai thua P(n)\n2. Chinh hop A(k,n)\n3. To hop C(k,n)\n";
+    std::cout << "1. Giai thua P(n)\n2. Chinh hop A(k,n)\n3. To hop    C(k,n)\n";
     std::cout << "Chon phep tinh can thuc hien: ";
     std::cin >> choose;
     std::cout << std::endl;
@@ -57,12 +64,12 @@ int main() {
             std::cout << "P(" << n << ") = " << P(n);
             break;
         case 2:
-            std::cout << "Nhap k, n = ";
+            std::cout << "Nhap k n = ";
             std::cin >> k >> n;
             std::cout << "A(" << k << "," << n << ") = " << A(k, n);
             break;
         case 3:
-            std::cout << "Nhap k, n = ";
+            std::cout << "Nhap k n = ";
             std::cin >> k >> n;
             std::cout << "C(" << k << "," << n << ") = " << C(k, n);
             break;
