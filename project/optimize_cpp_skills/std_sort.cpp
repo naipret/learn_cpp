@@ -13,8 +13,9 @@ int main() {
         std::cout << myArray[i] << " ";
     }
 
-    // Sử dụng std::sort để sắp xếp mảng giam dan
-    std::sort(myArray, std::end(myArray), std::greater());
+    // Sử dụng std::sort và tham số 3: std::greater<int>() để sắp xếp mảng giảm dần
+    std::sort(myArray, std::end(myArray), std::greater<int>());
+    // <=> std::sort(myArray, std::end(myArray), [](int a, int b) { return a >= b; });
 
     // In mảng sau khi đã sắp xếp
     std::cout << "Mảng sau khi sắp xếp: ";
