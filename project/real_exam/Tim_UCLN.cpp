@@ -1,39 +1,31 @@
 #include <fstream>
 #include <iostream>
-#include <numeric>  // std::gcd
 
-using namespace std;
+// using namespace std;
 
-//! để phân biệt giữa hàm gcd của std:: và hàm gcd tự viết đặt trong cst::
-// namespace cst {
-//     long long gcd(long long m, long long n) {
-//         if (m == 0)
-//             return n;
-//         if (n == 0)
-//             return m;
-//         if (m == n)
-//             return m;
-//         if (m > n)
-//             return gcd(m - n, n);
-//         return gcd(m, n - m);
-//     }
-// }
-//! ======================================================================
+namespace cst {
+    long long gcd(long long a, long long b) {
+        if (a == 0) {
+            return b;
+        }
+        return gcd(b % a, a);
+    }
+}
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(NULL);
 
-    long long m, n;
+    long long m{}, n{};
 
-    ifstream input;
+    std::ifstream input{};
     input.open("UCLN.inp");
     input >> m >> n;
     input.close();
 
-    long long ans = std::gcd(m, n);
+    long long ans = cst::gcd(m, n);
 
-    ofstream output;
+    std::ofstream output{};
     output.open("UCLN.out");
     output << ans;
     output.close();

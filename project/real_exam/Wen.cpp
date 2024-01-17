@@ -1,15 +1,15 @@
 #include <fstream>
 #include <iostream>
 
-using namespace std;
+// using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(NULL);
 
-    int x, n, m, y;
+    int x{}, n{}, m{}, y{};
 
-    ifstream input;
+    std::ifstream input{};
     input.open("Wen.inp");
     input >> x;
     input >> n;
@@ -17,10 +17,10 @@ int main() {
     input >> y;
     input.close();
 
-    int soCuonCanTraTien = y - int(y / (n + 1));
-    int ans = soCuonCanTraTien * m;
+    int soCuonCanTraTien{y - int(y / (n + 1))};
+    int ans{soCuonCanTraTien * m};
 
-    ofstream output;
+    std::ofstream output{};
     output.open("Wen.out");
     if (ans > x) {
         output << "Thieu";

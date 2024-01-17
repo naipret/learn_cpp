@@ -1,44 +1,42 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <string_view>
 
-using namespace std;
+// using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(NULL);
 
-    string str;
+    std::string str{};
 
-    ifstream input;
+    std::ifstream input{};
     input.open("MaDD.inp");
     input >> str;
     input.close();
 
-    string_view str_v = str;
-    int tong = 0;
-    for (int i = 0; i < str_v.length(); ++i) {
+    int tong{0};
+    for (int i{0}; i < str.length(); ++i) {
         if (i <= 3) {
-            tong += (str_v[i] - '0') * ((i * 2) + 3);
+            tong += (str[i] - '0') * ((i * 2) + 3);
         } else if (i == 4) {
-            tong += (str_v[i] - '0') * 2;
+            tong += (str[i] - '0') * 2;
         } else if (i == 5) {
-            tong += (str_v[i] - '0') * 4;
+            tong += (str[i] - '0') * 4;
         } else {
-            tong += (str_v[i] - '0') * 2;
+            tong += (str[i] - '0') * 2;
         }
     }
 
-    int soDu = tong % 9;
-    char ans;
+    int soDu {tong % 9};
+    char ans{};
     if (soDu == 8) {
         ans = 'K';
     } else {
         ans = int('A') + soDu;
     }
 
-    ofstream output;
+    std::ofstream output{};
     output.open("MaDD.out");
     output << ans;
     output.close();

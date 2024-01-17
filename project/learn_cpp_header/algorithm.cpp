@@ -12,7 +12,7 @@ namespace cst {
         std::cout << std::endl;
     }
 
-    namespace sorting {
+    namespace sort {
         void is_sorted(int arr[], int n, bool isGreater = false) {
             //* Kiểm tra xem mảng đã được sắp xếp hay chưa ========================================
             if (isGreater) {
@@ -74,9 +74,9 @@ namespace cst {
                 std::nth_element(arr, arr + value, arr + n);
             }
         }
-    }  // namespace sorting
+    }  // namespace sort
 
-    namespace searching {
+    namespace search {
         void adjacent_find(int arr[], int n) {
             //* Tìm xem có 2 phần tử liên tiếp nào mà trùng nhau không ============================
             std::cout << "std::adjacent_find(*begin, *end\'[\', [](int a, int b) { return a == b }\']\'); ======================================\n";
@@ -95,7 +95,7 @@ namespace cst {
             }
             //* sorted =================================================================
             {
-                sorting::sort(arr, n);
+                sort::sort(arr, n);
                 print_array(arr, n);
                 int *it2{std::adjacent_find(arr, arr + n)};
                 while (it2 != (arr + n)) {
@@ -128,7 +128,7 @@ namespace cst {
             //* 3 tham so mac dinh =====================================================
             std::cout << "std::binary_search(*begin, *end, value\'[\', std::greater<int>()\']\'); ==============================================\n";
             {
-                sorting::sort(arr, n);
+                sort::sort(arr, n);
                 print_array(arr, n);
                 int searchValue1{10};
                 if (std::binary_search(arr, arr + n, searchValue1)) {
@@ -144,7 +144,7 @@ namespace cst {
             // neu mang bi xep theo thu tu giam dan thi them tham so std::greater<int>()
             // noi chinh xac hon la std::sort() duoc sap xep theo dieu kien nao thi binary_search se duoc tim kiem dua tren dieu kien sap xep do
             {
-                sorting::sort(arr, n, true);
+                sort::sort(arr, n, true);
                 print_array(arr, n);
                 int searchValue2{10};
                 if (std::binary_search(arr, arr + n, searchValue2, std::greater<int>())) {
@@ -261,7 +261,7 @@ namespace cst {
             }
             std::cout << std::endl;
         }
-    }  // namespace searching
+    }  // namespace search
 
     namespace query {
         void all_of(int arr[], int n) {
@@ -302,7 +302,7 @@ namespace cst {
         }
     }  // namespace query
 
-    namespace copying {
+    namespace copy {
         void copy(int copy1[], int cp1, int copy2[], int cp2, int result[]) {
             std::cout << "std::copy(*begin, *end, *result) =================================================================================\n";
             std::fill(result, result + cp1 + cp2, 0);
@@ -452,9 +452,9 @@ namespace cst {
                 // source2[7] =    [1  2  3]  4  5  6  7
             }
         }
-    }  // namespace copying
+    }  // namespace copy
 
-    namespace comparison {
+    namespace compare {
         void equal(int arrN[], int n, int arrM[], int m) {
             std::cout << "std::equal(*begin1, *end1, *begin2\'[\', *end2\']\') =================================================================\n";
             //* không sort ================================================================
@@ -494,44 +494,14 @@ namespace cst {
         }
         //! ============================================================================
         // void equal_range() {}
-    }  // namespace comparison
-
-    void fill(int arr[], int n) {
-        std::cout << "std::fill(*begin, *end, value) ===================================================================================\n";
-        print_array(arr, n);
-        std::fill(arr, arr + n, 0);
-        print_array(arr, n);
-        std::cout << std::endl;
-    }
-
-    void fill_n() {
-        std::cout << "std::fill_n(*begin, range, value) ================================================================================\n";
-        int arr[9] = {};
-        print_array(arr, 9);
-        // Fill the first 3 positions with a value of 1, saving position.
-        int *it{std::fill_n(arr, 3, 1)};
-        print_array(arr, 9);
-        // Fill the next 3 positions with a value of 2, using last position.
-        it = std::fill_n(it, 3, 2);
-        print_array(arr, 9);
-        // Fill the last 3 positions with a value of 3, using relative math.
-        it = std::fill_n(it, 3, 3);
-        print_array(arr, 9);
-        std::cout << std::endl;
-        // 0  0  0   0  0  0  0  0  0
-        // [1  1  1]  0  0  0  0  0  0
-        // 1  1  1  [2  2  2]  0  0  0
-        // 1  1  1  2  2  2  [3  3  3]
-    }
+        // void lexicographical_compare() {}
+    }  // namespace compare
 
     namespace loop {
         //! ============================================================================
         // void for_each() {}
         // void for_each_n() {}
     }
-
-    //! ============================================================================
-    // void lexicographical_compare() {}
 
     namespace minmax {
         void max(int arr[], int n) {
@@ -598,9 +568,8 @@ namespace cst {
         // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
         // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
     }
-
     void move_backward(int arr[], int n) {
-        std::cout << "std::move_backward(*begin1, *end1, *begin2) ======================================================================\n";
+        std::cout << "std::move_backward(*begin1, *end1, *end2) ========================================================================\n";
         int moveArr[n] = {};
         std::cout << "Truoc khi std::move_backward\n";
         print_array(arr, n);
@@ -616,6 +585,157 @@ namespace cst {
         // Sau khi std::move_backward
         // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
         // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
+    }
+
+    void fill(int arr[], int n) {
+        std::cout << "std::fill(*begin, *end, value) ===================================================================================\n";
+        print_array(arr, n);
+        std::fill(arr, arr + n, 0);
+        print_array(arr, n);
+        std::cout << std::endl;
+    }
+    void fill_n() {
+        std::cout << "std::fill_n(*begin, range, value) ================================================================================\n";
+        int arr[9] = {};
+        print_array(arr, 9);
+        // Fill the first 3 positions with a value of 1, saving position.
+        int *it{std::fill_n(arr, 3, 1)};
+        print_array(arr, 9);
+        // Fill the next 3 positions with a value of 2, using last position.
+        it = std::fill_n(it, 3, 2);
+        print_array(arr, 9);
+        // Fill the last 3 positions with a value of 3, using relative math.
+        it = std::fill_n(it, 3, 3);
+        print_array(arr, 9);
+        std::cout << std::endl;
+        // 0  0  0   0  0  0  0  0  0
+        // [1  1  1]  0  0  0  0  0  0
+        // 1  1  1  [2  2  2]  0  0  0
+        // 1  1  1  2  2  2  [3  3  3]
+    }
+
+    void replace() {
+        std::cout << "std::replace(*begin, *end, value1, value2) =======================================================================\n";
+        constexpr int n{15};
+        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
+        print_array(arr, n);
+        std::replace(arr, arr + n, 2, 0);
+        print_array(arr, n);
+        std::replace(arr, arr + n, 6, 0);
+        print_array(arr, n);
+        std::replace(arr, arr + n, 12, 0);
+        print_array(arr, n);
+        std::cout << std::endl;
+        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
+        // 0  4  3  12  7  6  6  9  10  18  12  11  8  3  0
+        // 0  4  3  12  7  0  0  9  10  18  12  11  8  3  0
+        // 0  4  3  0   7  0  0  9  10  18  0   11  8  3  0
+    }
+    void replace_if() {
+        std::cout << "std::replace_if(*begin, *end, []() { }, value) ===================================================================\n";
+        constexpr int n{15};
+        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
+        print_array(arr, n);
+        std::replace_if(
+            arr, arr + n, [](int a) { return (a == 2) || (a == 6) || (a == 12); }, 0);
+        print_array(arr, n);
+        std::cout << std::endl;
+        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
+        // 0  4  3  0   7  0  0  9  10  18  0   11  8  3  0
+    }
+    void replace_copy() {
+        std::cout << "std::replace_copy(*begin, *end, *result, value1, value2) =========================================================\n";
+        constexpr int n{15};
+        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
+        int ans[n] = {};
+        print_array(arr, n);
+        print_array(ans, n);
+        std::replace_copy(arr, arr + n, ans, 12, 0);
+        print_array(ans, n);
+        std::cout << std::endl;
+        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
+        // 0  0  0  0   0  0  0  0  0   0   0   0   0  0  0
+        // 2  4  3  0   7  6  6  9  10  18  0   11  8  3  2
+    }
+    void replace_copy_if() {
+        std::cout << "std::replace_copy_if(*begin, *end, *result, []() { }, value]) ====================================================\n";
+        constexpr int n{15};
+        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
+        int ans[n] = {};
+        print_array(arr, n);
+        print_array(ans, n);
+        std::replace_copy_if(
+            arr, arr + n, ans, [](int a) { return a == 12; }, 0);
+        print_array(ans, n);
+        std::cout << std::endl;
+        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
+        // 0  0  0  0   0  0  0  0  0   0   0   0   0  0  0
+        // 2  4  3  0   7  6  6  9  10  18  0   11  8  3  2
+    }
+
+    void reverse() {
+        std::cout << "std::reverse(*begin, *end) =======================================================================================\n";
+        constexpr int n{15};
+        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
+        print_array(arr, n);
+        std::reverse(arr, arr + n);
+        print_array(arr, n);
+        std::cout << std::endl;
+        // 2  4  3  12  7   6   6   9  10  18  12  11  8  3  2
+        // 2  3  8  11  12  18  10  9  6   6   7   12  3  4  2
+    }
+    void reverse_copy() {
+        std::cout << "std::reverse_copy(*begin, *end, *result) =========================================================================\n";
+        constexpr int n{15};
+        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
+        int ans[n] = {};
+        print_array(arr, n);
+        print_array(ans, n);
+        std::reverse_copy(arr, arr + n, ans);
+        print_array(arr, n);
+        print_array(ans, n);
+        std::cout << std::endl;
+        // 2  4  3  12  7   6   6   9  10  18  12  11  8  3  2
+        // 0  0  0  0   0   0   0   0  0   0   0   0   0  0  0
+        // 2  4  3  12  7   6   6   9  10  18  12  11  8  3  2
+        // 2  3  8  11  12  18  10  9  6   6   7   12  3  4  2
+    }
+
+    void rotate() {
+        // =================
+        // ||  3 *        ||
+        // 9 8 7 6 5 4 3 2 1
+        //   <==============
+        // 6 5 4 3 2 1 9 8 7
+        std::cout << "std::rotate(*begin, *begin + range, *end) ========================================================================\n";
+        constexpr int n{15};
+        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
+        print_array(arr, n);
+        std::cout << "std::rotate(arr, arr + 5, arr + n);\n";
+        std::rotate(arr, arr + 5, arr + n);
+        print_array(arr, n);
+        std::cout << std::endl;
+        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
+        // std::rotate(arr, arr + 5, arr + n);
+        // 6  6  9  10  18  12  11  8  3  2  2  4  3  12  7
+    }
+    void rotate_copy() {
+        std::cout << "std::rotate_copy(*begin, *begin + range, *end, *result) ===========================================================\n";
+        constexpr int n{15};
+        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
+        int ans[n] = {};
+        print_array(arr, n);
+        print_array(ans, n);
+        std::cout << "std::rotate_copy(arr, arr + 5, arr + n, ans);\n";
+        std::rotate_copy(arr, arr + 5, arr + n, ans);
+        print_array(arr, n);
+        print_array(ans, n);
+        std::cout << std::endl;
+        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
+        // 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+        // std::rotate_copy(arr, arr + 5, arr + n, ans);
+        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
+        // 6  6  9  10  18  12  11  8  3  2  2  4  3  12  7
     }
 
     namespace permutation {
@@ -677,7 +797,6 @@ namespace cst {
         // 4  3  12  7   9   10  18  12  11  8   3
         // 4  3  7   9   10  18  11  8   3
     }
-
     void remove_if() {
         std::cout << "std::remove_if(*begin, *end, []() { }]) ==========================================================================\n";
         constexpr int n{15};
@@ -692,7 +811,6 @@ namespace cst {
         // 2  4  3   12  7   6   6   9   10  18  12  11  8  3  2
         // 4  3  7   9   10  18  11  8   3
     }
-
     void remove_copy() {
         std::cout << "std::remove_copy(*begin, *end, *result, value) ===================================================================\n";
         constexpr int n{15};
@@ -707,7 +825,6 @@ namespace cst {
         // 0  0  0  0   0  0  0  0   0   0   0   0   0  0  0
         // 2  4  3  7   6  6  9  10  18  11  8   3   2  0  0
     }
-
     void remove_copy_if() {
         std::cout << "std::remove_copy_if(*begin, *end, *result, []() { }]) ============================================================\n";
         constexpr int n{15};
@@ -721,135 +838,6 @@ namespace cst {
         // 2  4  3  12  7  6  6  9   10  18  12  11  8  3  2
         // 0  0  0  0   0  0  0  0   0   0   0   0   0  0  0
         // 2  4  3  7   6  6  9  10  18  11  8   3   2  0  0
-    }
-
-    void replace() {
-        std::cout << "std::replace(*begin, *end, value1, value2) =======================================================================\n";
-        constexpr int n{15};
-        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
-        print_array(arr, n);
-        std::replace(arr, arr + n, 2, 0);
-        print_array(arr, n);
-        std::replace(arr, arr + n, 6, 0);
-        print_array(arr, n);
-        std::replace(arr, arr + n, 12, 0);
-        print_array(arr, n);
-        std::cout << std::endl;
-        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
-        // 0  4  3  12  7  6  6  9  10  18  12  11  8  3  0
-        // 0  4  3  12  7  0  0  9  10  18  12  11  8  3  0
-        // 0  4  3  0   7  0  0  9  10  18  0   11  8  3  0
-    }
-
-    void replace_if() {
-        std::cout << "std::replace_if(*begin, *end, []() { }, value) ===================================================================\n";
-        constexpr int n{15};
-        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
-        print_array(arr, n);
-        std::replace_if(
-            arr, arr + n, [](int a) { return (a == 2) || (a == 6) || (a == 12); }, 0);
-        print_array(arr, n);
-        std::cout << std::endl;
-        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
-        // 0  4  3  0   7  0  0  9  10  18  0   11  8  3  0
-    }
-
-    void replace_copy() {
-        std::cout << "std::replace_copy(*begin, *end, *result, value1, value2) =========================================================\n";
-        constexpr int n{15};
-        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
-        int ans[n] = {};
-        print_array(arr, n);
-        print_array(ans, n);
-        std::replace_copy(arr, arr + n, ans, 12, 0);
-        print_array(ans, n);
-        std::cout << std::endl;
-        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
-        // 0  0  0  0   0  0  0  0  0   0   0   0   0  0  0
-        // 2  4  3  0   7  6  6  9  10  18  0   11  8  3  2
-    }
-
-    void replace_copy_if() {
-        std::cout << "std::replace_copy_if(*begin, *end, *result, []() { }, value]) ====================================================\n";
-        constexpr int n{15};
-        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
-        int ans[n] = {};
-        print_array(arr, n);
-        print_array(ans, n);
-        std::replace_copy_if(
-            arr, arr + n, ans, [](int a) { return a == 12; }, 0);
-        print_array(ans, n);
-        std::cout << std::endl;
-        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
-        // 0  0  0  0   0  0  0  0  0   0   0   0   0  0  0
-        // 2  4  3  0   7  6  6  9  10  18  0   11  8  3  2
-    }
-
-    void reverse() {
-        std::cout << "std::reverse(*begin, *end) =======================================================================================\n";
-        constexpr int n{15};
-        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
-        print_array(arr, n);
-        std::reverse(arr, arr + n);
-        print_array(arr, n);
-        std::cout << std::endl;
-        // 2  4  3  12  7   6   6   9  10  18  12  11  8  3  2
-        // 2  3  8  11  12  18  10  9  6   6   7   12  3  4  2
-    }
-
-    void reverse_copy() {
-        std::cout << "std::reverse_copy(*begin, *end, *result) =========================================================================\n";
-        constexpr int n{15};
-        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
-        int ans[n] = {};
-        print_array(arr, n);
-        print_array(ans, n);
-        std::reverse_copy(arr, arr + n, ans);
-        print_array(arr, n);
-        print_array(ans, n);
-        std::cout << std::endl;
-        // 2  4  3  12  7   6   6   9  10  18  12  11  8  3  2
-        // 0  0  0  0   0   0   0   0  0   0   0   0   0  0  0
-        // 2  4  3  12  7   6   6   9  10  18  12  11  8  3  2
-        // 2  3  8  11  12  18  10  9  6   6   7   12  3  4  2
-    }
-
-    void rotate() {
-        // =================
-        // ||  3 *        ||
-        // 9 8 7 6 5 4 3 2 1
-        //   <==============
-        // 6 5 4 3 2 1 9 8 7
-        std::cout << "std::rotate(*begin, *end) ========================================================================================\n";
-        constexpr int n{15};
-        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
-        print_array(arr, n);
-        std::cout << "std::rotate(arr, arr + 5, arr + n);\n";
-        std::rotate(arr, arr + 5, arr + n);
-        print_array(arr, n);
-        std::cout << std::endl;
-        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
-        // std::rotate(arr, arr + 5, arr + n);
-        // 6  6  9  10  18  12  11  8  3  2  2  4  3  12  7
-    }
-
-    void rotate_copy() {
-        std::cout << "std::rotate_copy(*begin, *end, *result) ===========================================================================\n";
-        constexpr int n{15};
-        int arr[n] = {2, 4, 3, 12, 7, 6, 6, 9, 10, 18, 12, 11, 8, 3, 2};
-        int ans[n] = {};
-        print_array(arr, n);
-        print_array(ans, n);
-        std::cout << "std::rotate_copy(arr, arr + 5, arr + n, ans);\n";
-        std::rotate_copy(arr, arr + 5, arr + n, ans);
-        print_array(arr, n);
-        print_array(ans, n);
-        std::cout << std::endl;
-        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
-        // 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-        // std::rotate_copy(arr, arr + 5, arr + n, ans);
-        // 2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
-        // 6  6  9  10  18  12  11  8  3  2  2  4  3  12  7
     }
 
     void unique() {
@@ -1229,7 +1217,7 @@ int main() {
     std::cout << std::endl;
 
     {
-        std::cout << "1. SORTING   #############################################################################################################\n";
+        std::cout << "1. sort   #############################################################################################################\n";
         std::cout << std::endl;
         {
             constexpr int n{15};
@@ -1239,7 +1227,7 @@ int main() {
             std::cout << "// std::is_sorted(arr, arr + n);\n";
             std::cout << "arr[]\t";
             cst::print_array(arr, n);
-            cst::sorting::is_sorted(arr, n);
+            cst::sort::is_sorted(arr, n);
             std::cout << std::endl;
             // arr[]   2  4  3  12  7  6  6  9  10  18  12  11  8  3  2
             // Mang chua duoc sap xep!
@@ -1248,10 +1236,10 @@ int main() {
             std::cout << "// std::sort(arr, arr + n);\n";
             std::cout << "Sau khi sap xep:\n";
             std::cout << "arr[]\t";
-            cst::sorting::sort(arr, n);
+            cst::sort::sort(arr, n);
             cst::print_array(arr, n);
             std::cout << "Kiem tra bang std::is_sorted(): ";
-            cst::sorting::is_sorted(arr, n);
+            cst::sort::is_sorted(arr, n);
             std::cout << std::endl;
             // arr[]   2  2  3  3  4  6  6  7  8  9  10  11  12  12  18
             // Kiem tra bang std::is_sorted(): Mang da duoc sap xep!
@@ -1260,10 +1248,10 @@ int main() {
             std::cout << "// std::sort(arr, arr + n, std::greater<int>());\n";
             std::cout << "Sau khi sap xep theo chieu nguoc lai:\n";
             std::cout << "arr[]\t";
-            cst::sorting::sort(arr, n, true);
+            cst::sort::sort(arr, n, true);
             cst::print_array(arr, n);
             std::cout << "Kiem tra bang std::is_sorted( , , std::greater<int>()): ";
-            cst::sorting::is_sorted(arr, n, true);
+            cst::sort::is_sorted(arr, n, true);
             std::cout << std::endl;
             // arr[]   18  12  12  11  10  9  8  7  6  6  4  3  3  2  2
             // Kiem tra bang std::is_sorted( , , std::greater<int>()): Mang da duoc sap xep!
@@ -1275,7 +1263,7 @@ int main() {
             std::cout << "std::stable_sort(*begin, *end) ===========================================================================================\n";
             std::cout << "// std::stable_sort(arr, arr + n);\n";
             std::cout << "// La thuan toan on dinh, nhung cham hon std::sort()\n";
-            cst::sorting::stable_sort(arr, n);
+            cst::sort::stable_sort(arr, n);
             std::cout << "arr[]\t";
             cst::print_array(arr, n);
             std::cout << std::endl;
@@ -1285,7 +1273,7 @@ int main() {
             std::cout << "// std::stable_sort(arr, arr + n, std::greater<int>());\n";
             std::cout << "Sau khi sap xep theo chieu nguoc lai:\n";
             std::cout << "arr[]\t";
-            cst::sorting::stable_sort(arr, n, true);
+            cst::sort::stable_sort(arr, n, true);
             cst::print_array(arr, n);
             std::cout << std::endl;
             // arr[]   18  12  12  11  10  9  8  7  6  6  4  3  3  2  2
@@ -1298,7 +1286,7 @@ int main() {
             std::cout << "std::partial_sort(*begin, *begin + range, *end) ==========================================================================\n";
             std::cout << "// std::partial_sort(arr, arr + " << range << ", arr + n);\n";
             std::cout << "// Chi sap xep cac phan tu dau tien, cu the la " << range << ".\n";
-            cst::sorting::partial_sort(arr, n, range);
+            cst::sort::partial_sort(arr, n, range);
             std::cout << "arr[]\t";
             cst::print_array(arr, n);
             std::cout << std::endl;
@@ -1308,7 +1296,7 @@ int main() {
             std::cout << "// std::partial_sort(arr, arr + " << range << ", arr + n, std::greater<int>());\n";
             std::cout << "Sau khi sap xep theo chieu nguoc lai:\n";
             std::cout << "arr[]\t";
-            cst::sorting::partial_sort(arr, n, range, true);
+            cst::sort::partial_sort(arr, n, range, true);
             cst::print_array(arr, n);
             std::cout << std::endl;
             // arr[]   [18  12  12  11  10]  2  2  3  3  4  7  9  8  6  6

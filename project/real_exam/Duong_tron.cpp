@@ -2,25 +2,25 @@
 #include <fstream>
 #include <iostream>
 
-using namespace std;
+// using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(NULL);
 
-    double r;
-    int x1, y1, x2, y2;
+    double r{};
+    int x1{}, y1{}, x2{}, y2{};
 
-    ifstream input;
-    input.open("Duong_tron.inp");
+    std::ifstream input{};
+    input.open("INPUT.INP");
     input >> r >> x1 >> x2;
     input >> x2 >> y2;
     input.close();
 
-    double ans = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    double ans = std::sqrt(std::pow(x2 - x1, 2) + std::pow(y2 - y1, 2));
 
-    ofstream output;
-    output.open("Duong_tron.out");
+    std::ofstream output{};
+    output.open("OUTPUT.OUT");
     if (r > ans) {
         output << "INSIDE";
     } else if (r < ans) {
