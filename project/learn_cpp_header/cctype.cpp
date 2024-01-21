@@ -1,49 +1,15 @@
-#include <cctype>
-#include <iostream>
+//* isalnum	Check if character is alphanumeric (function)
+//* isalpha	Check if character is alphabetic (function)
+//* isspace	Check if character is a white-space (function)
+//* isdigit	Check if character is decimal digit (function)
+//* isxdigit	Check if character is hexadecimal digit (function)
+//* islower	Check if character is lowercase letter (function)
+//* isupper	Check if character is uppercase letter (function)
+// isblank	Check if character is blank (function)
+// isprint	Check if character is printable (function)
+// ispunct	Check if character is a punctuation character (function)
+// iscntrl	Check if character is a control character (function)
+// isgraph	Check if character has graphical representation (function)
 
-bool isSpecialCharacter(char ch) {
-    return !std::isalnum(ch) && !std::isspace(ch);
-}
-
-int main() {
-    std::string inputString;
-
-    std::cout << "Nhap mot chuoi ky tu: ";
-    std::getline(std::cin >> std::ws, inputString);
-
-    for (char ch : inputString) {
-        if (std::isalnum(ch)) {
-            std::cout << ch << " vua la mot chu cai hoac so." << std::endl;
-        }
-        if (std::isalpha(ch)) {
-            std::cout << ch << " la mot chu cai." << std::endl;
-        } else if (std::isdigit(ch)) {
-            std::cout << ch << " la mot chu so." << std::endl;
-        } else if (std::isspace(ch)) {
-            std::cout << ch << " la mot khoang trang." << std::endl;
-        } else if (isSpecialCharacter(ch)) {
-            std::cout << ch << " la mot ky tu dac biet." << std::endl;
-        } else {
-            std::cout << ch << " khong thuoc cac loai kieu tren." << std::endl;
-        }
-    }
-
-    return 0;
-}
-
-// 1. **Hàm Kiểm tra:**
-//   - `isalpha`: Kiểm tra xem một ký tự có phải là chữ cái không.
-//   - `isdigit`: Kiểm tra xem một ký tự có phải là chữ số không.
-//   - `isalnum`: Kiểm tra xem một ký tự có phải là chữ cái hoặc chữ số không.
-//   - `islower`, `isupper`: Kiểm tra xem một ký tự có phải là chữ thường hay chữ hoa không.
-
-// 2. **Hàm Chuyển đổi:**
-//   - `tolower`: Chuyển đổi một ký tự thành chữ thường.
-//   - `toupper`: Chuyển đổi một ký tự thành chữ hoa.
-
-// 3. **Hàm Kiểm tra ký tự đặc biệt:**
-//   - `isspace`: Kiểm tra xem một ký tự có phải là khoảng trắng không.
-//   - `iscntrl`: Kiểm tra xem một ký tự có phải là ký tự điều khiển không.
-
-// 4. **Hàm Kiểm tra chữ viết tắt:**
-//   - `isxdigit`: Kiểm tra xem một ký tự có phải là số thập lục phân không.
+//* tolower	Convert uppercase letter to lowercase (function)
+//* toupper	Convert lowercase letter to uppercase (function)
