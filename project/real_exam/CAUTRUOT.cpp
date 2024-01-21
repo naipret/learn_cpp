@@ -16,9 +16,9 @@ int main() {
 
     int tongSoBuoc{0};
     if ((9 - tang) % 2 == 0) {
-        tongSoBuoc = (9 - tang) / 2;
+        tongSoBuoc = int((9 - tang) / 2);
     } else {
-        tongSoBuoc = ((9 - tang) / 2) + 1;
+        tongSoBuoc = int(((9 - tang) / 2)) + 1;
     }
 
     std::ofstream output{};

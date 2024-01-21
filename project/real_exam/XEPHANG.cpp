@@ -21,21 +21,22 @@ int main() {
 
     std::sort(arr, arr + n);
 
-    int *itr{std::adjacent_find(arr, arr + n)};
-    int *ptr_viTri{arr};
-    int khoangCachMax{0};
-    while (itr != (arr + n)) {
-        int *ptr_viTriSoTiepTheo{std::upper_bound(itr, arr + n, *itr)};
-        if (khoangCachMax < (ptr_viTriSoTiepTheo - itr)) {
-            ptr_viTri = itr;
-            khoangCachMax = ptr_viTriSoTiepTheo - itr;
+    int *itrArr{arr};
+    int *ptrVal{arr};
+    int countMax{0};
+    while (itrArr != (arr + n)) {
+        int *ptrNextValue{std::upper_bound(itrArr, arr + n, *itrArr)};
+        int tempCount{int(ptrNextValue - itrArr)};
+        if (countMax < tempCount) {
+            countMax = tempCount;
+            ptrVal = itrArr;
         }
-        itr = std::adjacent_find(ptr_viTriSoTiepTheo++, arr + n);
+        itrArr = ptrNextValue;
     }
 
     std::ofstream output{};
     output.open("OUTPUT.OUT");
-    output << khoangCachMax << ' ' << *ptr_viTri;
+    output << countMax << ' ' << *ptrVal;
     output.close();
 
     return 0;
