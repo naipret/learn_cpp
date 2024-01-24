@@ -1,23 +1,26 @@
-#include <iostream>
 #include <fstream>
+#include <ios>
 
-using namespace std;
+// using namespace std;
 
 int main() {
     std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    constexpr std::streamsize buffer_size{4096};
+    char buffer[buffer_size];
 
     
 
-    ifstream input{};
-    input.open("");
+    std::ifstream input{};
+    input.rdbuf()->pubsetbuf(buffer, buffer_size);
+    input.open("", std::ios::binary);
     
     input.close();
 
     
 
-    ofstream output{};
-    output.open("");
+    std::ofstream output{};
+    output.rdbuf()->pubsetbuf(buffer, buffer_size);
+    output.open("", std::ios::binary);
     
     output.close();
 
