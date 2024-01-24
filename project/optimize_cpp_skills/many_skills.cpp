@@ -30,11 +30,11 @@ void primeFactorization(int n) {
             int i{5};
             //! =============== n != 1 ===============
             while (n != 1) {
-                if (n % i == 0) {
+                while (n % i == 0) {
                     std::cout << i << ' ';
                     n /= i;
                 }
-                if (n % (i + 2) == 0) {
+                while (n % (i + 2) == 0) {
                     std::cout << i + 2 << ' ';
                     n /= (i + 2);
                 }
