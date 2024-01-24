@@ -6,15 +6,15 @@
 
 // using namespace std;
 
-bool primes[(2 * 3000000) + 1];
+bool primes[(2 * 30000000) + 1];
 
 void sieve(int n) {
     std::memset(primes, true, sizeof(primes));
     primes[0] = false;
     primes[1] = false;
-    for (int i{2}; i <= (2 * 3000000); ++i) {
+    for (int i{2}; i <= (2 * 30000000); ++i) {
         if (primes[i]) {
-            for (int j{i * 2}; j <= (2 * 3000000); j += i) {
+            for (int j{i * 2}; j <= (2 * 30000000); j += i) {
                 primes[j] = false;
             }
         }

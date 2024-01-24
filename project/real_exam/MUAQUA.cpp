@@ -16,21 +16,21 @@ int main() {
 
     int tongTien{0};
 
-    while (N - 8 >= 8) {
-        N = (N - 8) - 4;
-        tongTien += (8 * X);
+    while (N >= (8 + 4)) {
+        tongTien += 8 * 10;
+        N -= (8 + 4);
     }
-    while (N - 5 >= 5) {
-        N = (N - 5) - 2;
-        tongTien += (5 * X);
+    while (N >= (5 + 2)) {
+        tongTien += 5 * 10;
+        N -= (5 + 2);
     }
-    while (N - 3 >= 3) {
-        N = (N - 3) - 1;
-        tongTien += (3 * X);
+    while (N >= (3 + 1)) {
+        tongTien += 3 * 10;
+        N -= (3 + 1);
     }
-    while (N - 1 != 0) {
-        N = N - 1;
-        tongTien += (1 * X);
+    while (N != 0) {
+        tongTien += 10;
+        N -= 1;
     }
 
     ofstream output{};

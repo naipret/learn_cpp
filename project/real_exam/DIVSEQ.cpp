@@ -1,55 +1,47 @@
 #include <algorithm>
+#include <cmath>
 #include <fstream>
 #include <iostream>
 #include <numeric>
 
-using namespace std;
+// using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(NULL);
 
-    int T_case{0};
+    int T_case{};
 
-    ifstream input{};
+    std::ifstream input{};
     input.open("INPUT.INP");
+    std::ofstream output{};
+    output.open("OUTPUT.OUT");
+
     input >> T_case;
-    int d[T_case] = {};
-    int N[T_case] = {};
-    int arr[T_case][(5 * 1000) + 1];
-    for (int i_case{0}; i_case < T_case; ++i_case) {
-        input >> d[i_case] >> N[i_case];
-        for (int j_arr{0}; j_arr < N[i_case]; ++j_arr) {
-            input >> arr[i_case][j_arr];
+
+    for (int testCase{0}; testCase < T_case; ++testCase) {
+        int d{}, N{};
+        input >> d >> N;
+        int arr[N] = {};
+        for (int i{0}; i < N; ++i) {
+            input >> arr[i];
         }
-    }
-    input.close();
 
-    int subCount[T_case] = {0};
-
-    for (int i_case{0}; i_case < T_case; ++i_case) {
-        for (int subLong{1}; subLong <= N[i_case]; ++subLong) {
-            int *itr{&(arr[i_case][0])};
-            int *itrEnd{&(arr[i_case][0]) + N[i_case]};
-            while (itr != itrEnd) {
-                int sumOfSubRange{std::accumulate(itr, itr + subLong, 0)};
-                if (sumOfSubRange % d[i_case] == 0) {
-                    subCount[i_case]++;
+        int count{0};
+        for (int range{1}; range <= N; ++range) {
+            int *itr{arr + range};
+            while (itr != (arr + N + 1)) {
+                int tempSum{std::accumulate(itr - range, itr, 0)};
+                if (tempSum % d == 0) {
+                    count++;
                 }
                 itr++;
-                if (*(itr + (subLong - 1)) == 0) {
-                    break;
-                }
             }
         }
-        // std::cout << '\n';
+        output << count << '\n';
     }
 
-    ofstream output{};
-    output.open("OUTPUT.OUT");
-    for (int i_case{0}; i_case < T_case; ++i_case) {
-        output << subCount[i_case] << '\n';
-    }
+    input.close();
     output.close();
 
     return 0;
