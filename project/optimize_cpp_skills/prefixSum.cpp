@@ -17,7 +17,7 @@ int main() {
         input >> arr[c];
     }
     int pre[col + 1] = {0};
-    std::partial_sum(arr + 1, arr + col + 1, pre + 1);
+    std::partial_sum(arr, arr + (col + 1), pre);
 
     std::ofstream output{"output.out", std::ios::binary};
     output.rdbuf()->pubsetbuf(outputBuffer, bufferSize);
