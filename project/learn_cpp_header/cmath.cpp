@@ -27,7 +27,7 @@ int main() {
     cout << "fmax(2.1, 3.5) = " << fmax(2.1, 3.5) << endl
          << endl;  // giá trị lớn nhất giữa 2.1 và 3.5
 
-    cout << "fmod(15, 8) = " << fmod(15, 8) << endl;          // phần dư của 15 chia 8
+    cout << "mod(15, 8) = " << mod(15, 8) << endl;          // phần dư của 15 chia 8
     cout << "15 % 8 = " << 15 % 8 << endl;                    // phần dư của 15 chia 8
     cout << "fmod(15.2, 8.7) = " << fmod(15.2, 8.7) << endl;  // phần dư của 15.2 chia 8.7
     cout << "log(2) = " << log(2) << endl;                    // logarit tự nhiên của 2

@@ -13,6 +13,7 @@ int main() {
 
     // Tạo string_view từ chuỗi std::string
     std::string_view str_v(str);
+    std::string_view strv2{"This is okay"};
 
     // Sử dụng string_view
     printStringView(str_v);

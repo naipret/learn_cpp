@@ -163,7 +163,7 @@ namespace cst {
             std::cout << "lower_bound cua 12 la:  " << std::lower_bound(arr, arr + n, 12) << "  " << *(std::lower_bound(arr, arr + n, 12));
             std::cout << std::endl;
             std::cout << std::endl;
-            // 2  2  3  3  4  6  6  7  8  9  10  11  12  12  18
+            // 2  2  3  3  4  6  6  7  8  9  10  [11]  12  12  18
             // lower_bound cua 12 la:  0x74ffbffc40  12
         }
         void upper_bound(int arr[], int n) {
@@ -172,7 +172,7 @@ namespace cst {
             std::cout << "upper_bound cua 12 la:  " << std::upper_bound(arr, arr + n, 12) << "  " << *(std::upper_bound(arr, arr + n, 12));
             std::cout << std::endl;
             std::cout << std::endl;
-            // 2  2  3  3  4  6  6  7  8  9  10  11  12  12  18
+            // 2  2  3  3  4  6  6  7  8  9  10  11  12  12  [18]
             // upper_bound cua 12 la:  0x49a3dff898  18
         }
         void count(int arr[], int n) {
@@ -201,7 +201,7 @@ namespace cst {
             }
             std::cout << std::endl;
             std::cout << std::endl;
-            // 2  4  3  7  6  6  9  10  12  11  8  3  2
+            // [2]  4  3  7  6  6  9  10  12  11  8  3  [2]
             // 0xb5593ff720  0xb5593ff740  0xb5593ff758
         }
         void find_if(int arr[], int n) {
