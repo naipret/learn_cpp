@@ -11,7 +11,7 @@ int main() {
     ifstream input{};
     input.rdbuf()->pubsetbuf(buffer, bufferSize);
     input.open("input.inp", ios_base::binary);
-
+    
     input.close();
 
     ofstream output{};
