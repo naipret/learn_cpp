@@ -2,13 +2,6 @@
 *
 #! ignore all files and unignore some files with '!'
 
-#! .VSCODE FOLDER
-!.vscode/
-# alow these 3 files only
-!.vscode/c_cpp_properties.json
-!.vscode/launch.json
-!.vscode/tasks.json
-
 #! INCLUDE FOLDER
 !include/
 # alow all .h and .hpp files
